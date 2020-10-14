@@ -1,7 +1,7 @@
 # GT2roguelike
 
 
-Game build for Game Engines Course @ HTW Berlin 
+Game built for Game Engines Course @ HTW Berlin 
 
 
 
@@ -10,6 +10,7 @@ Game build for Game Engines Course @ HTW Berlin
 
 more information and documentation of the development process can be found in our github WIKI !
 
+* Game Idea: https://github.com/daaning/GT2roguelike/wiki/Spielidee:-Electro-Dungeon
 
 ## Projects
 
