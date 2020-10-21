@@ -11,7 +11,7 @@ public class spawnPoint : MonoBehaviour
     private void Start()
 
     {
-    int r = UnityEngine.Random.Range(0, objects.Length);
-    Instantiate(objects[r], transform.position, Quaternion.identity);
+        int r = UnityEngine.Random.Range(0, objects.Length);
+        Instantiate(objects[r], transform.position, Quaternion.identity);
     }
 }
