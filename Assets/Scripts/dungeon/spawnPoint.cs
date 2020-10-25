@@ -12,6 +12,7 @@ public class spawnPoint : MonoBehaviour
 
     {
         int r = UnityEngine.Random.Range(0, objects.Length);
-        Instantiate(objects[r], transform.position, Quaternion.identity);
+        GameObject instance = (GameObject) Instantiate(objects[r], transform.position, Quaternion.identity);
+        instance.transform.parent = transform;
     }
 }

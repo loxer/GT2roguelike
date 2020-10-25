@@ -14,13 +14,14 @@ public class DungeonGenerator : MonoBehaviour
 {
     public Transform[] startPos;
     public GameObject[] dungeons;
-    public LayerMask dugeonMask; 
+    public LayerMask dugeonMask;
+    public int dungeonLevelDepth;
 
     private int direction;
     public float moveTransform;
 
     private float time;
-    public float timeBetween = 0.25f;
+    public float spawnDelta = 1.0f;
 
     public float minX;
     public float maxX;
@@ -39,10 +40,10 @@ public class DungeonGenerator : MonoBehaviour
 
     private void Update()
     {
-        if (time <= 0 && stop == false)
+        if (time <= 0 && !stop)
         {
             move();
-            time = timeBetween;
+            time = spawnDelta;
         }
         else
         {
@@ -122,9 +123,10 @@ public class DungeonGenerator : MonoBehaviour
             {
 
                 Collider2D collider = Physics2D.OverlapCircle(transform.position, 1, dugeonMask);
-                if (collider.GetComponent<Dungeon>().open != Dungeon.gates.LBR)
+                if (collider.GetComponent<Dungeon>().open != Dungeon.gates.LBR && collider.GetComponent<Dungeon>().open != Dungeon.gates.LTRB)
                 {
                     collider.GetComponent<Dungeon>().selfDestruct();
+                    Instantiate(dungeons[3], transform.position, Quaternion.identity);
                 }
                 transform.position = new Vector2(transform.position.x, transform.position.y - moveTransform);
 
