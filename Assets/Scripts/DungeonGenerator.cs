@@ -14,6 +14,7 @@ public class DungeonGenerator : MonoBehaviour
 {
     public Transform[] startPos;
     public GameObject[] dungeons;
+    public LayerMask dugeonMask; 
 
     private int direction;
     public float moveTransform;
@@ -51,6 +52,14 @@ public class DungeonGenerator : MonoBehaviour
 
     private void move()
     {
+
+
+
+        // left process
+
+
+
+
         if (direction == 1 || direction == 2)
         {
             if (transform.position.x < maxX)
@@ -76,6 +85,14 @@ public class DungeonGenerator : MonoBehaviour
                 direction = 5;
             }
         }
+
+
+
+        // right process
+
+
+
+
         else if (direction == 3 || direction == 4)
         {   
             if (transform.position.x > minX)
@@ -93,18 +110,29 @@ public class DungeonGenerator : MonoBehaviour
                 direction = 5;
             }
         }
+
+
+
+        //downwards process
+
+
         else if (direction == 5)
         {
             if (transform.position.y > minY)
             {
+
+                Collider2D collider = Physics2D.OverlapCircle(transform.position, 1, dugeonMask);
+                if (collider.GetComponent<Dungeon>().open != Dungeon.gates.LBR)
+                {
+                    collider.GetComponent<Dungeon>().selfDestruct();
+                }
                 transform.position = new Vector2(transform.position.x, transform.position.y - moveTransform);
 
                 int dugeonType = UnityEngine.Random.Range(2, 4);
-
                 Instantiate(dungeons[dugeonType], transform.position, Quaternion.identity);
 
-
                 direction = UnityEngine.Random.Range(1, 6);
+                    
             }
             else
             {   
@@ -112,6 +140,9 @@ public class DungeonGenerator : MonoBehaviour
                 stop = true;
             }
         }
+
+
+
         
     }
 
