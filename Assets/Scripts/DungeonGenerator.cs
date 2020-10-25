@@ -27,8 +27,7 @@ public class DungeonGenerator : MonoBehaviour
     public float minX;
     public float maxX;
     public float minY;
-
-    private bool stop = false;
+    public bool stop = false;
 
     private void Start()
     {
