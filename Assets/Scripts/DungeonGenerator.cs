@@ -13,7 +13,7 @@ using System;
 public class DungeonGenerator : MonoBehaviour
 {
     public Transform[] startPos;
-    public GameObject[] rooms;
+    public GameObject[] dungeons;
 
     private int direction;
     public float moveTransform;
@@ -31,7 +31,7 @@ public class DungeonGenerator : MonoBehaviour
     {
         int r = UnityEngine.Random.Range(0, startPos.Length);
         transform.position = startPos[r].position;
-        Instantiate(rooms[0], transform.position, Quaternion.identity);
+        Instantiate(dungeons[0], transform.position, Quaternion.identity);
 
         direction = UnityEngine.Random.Range(1, 6);
     }
@@ -56,8 +56,13 @@ public class DungeonGenerator : MonoBehaviour
             if (transform.position.x < maxX)
             {
                 transform.position = new Vector2(transform.position.x + moveTransform, transform.position.y);
+
+                int dugeonType = UnityEngine.Random.Range(0, dungeons.Length);
+                Instantiate(dungeons[dugeonType], transform.position, Quaternion.identity);
+
                 direction = UnityEngine.Random.Range(1, 6);
-                if(direction == 3)
+
+                if (direction == 3)
                 {
                     direction = 2;
                 }
@@ -76,7 +81,12 @@ public class DungeonGenerator : MonoBehaviour
             if (transform.position.x > minX)
             {
                 transform.position = new Vector2(transform.position.x - moveTransform, transform.position.y);
+                
+                int dugeonType = UnityEngine.Random.Range(2, 4);
+                Instantiate(dungeons[dugeonType], transform.position, Quaternion.identity);
+
                 direction = UnityEngine.Random.Range(3, 6);
+
             } 
             else
             {
@@ -88,8 +98,13 @@ public class DungeonGenerator : MonoBehaviour
             if (transform.position.y > minY)
             {
                 transform.position = new Vector2(transform.position.x, transform.position.y - moveTransform);
-                direction = UnityEngine.Random.Range(1, 6);
 
+                int dugeonType = UnityEngine.Random.Range(2, 4);
+
+                Instantiate(dungeons[dugeonType], transform.position, Quaternion.identity);
+
+
+                direction = UnityEngine.Random.Range(1, 6);
             }
             else
             {   
@@ -97,7 +112,7 @@ public class DungeonGenerator : MonoBehaviour
                 stop = true;
             }
         }
-        Instantiate(rooms[0], transform.position, Quaternion.identity);
+        
     }
 
 }
