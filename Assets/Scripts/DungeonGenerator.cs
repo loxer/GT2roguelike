@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using System.IO;
 using System.ComponentModel;
+using System;
 
 public class DungeonGenerator : MonoBehaviour
 {
@@ -55,6 +56,15 @@ public class DungeonGenerator : MonoBehaviour
             if (transform.position.x < maxX)
             {
                 transform.position = new Vector2(transform.position.x + moveTransform, transform.position.y);
+                direction = UnityEngine.Random.Range(1, 6);
+                if(direction == 3)
+                {
+                    direction = 2;
+                }
+                else if (direction == 4)
+                {
+                    direction = 5;
+                }
             }
             else
             {
@@ -66,7 +76,9 @@ public class DungeonGenerator : MonoBehaviour
             if (transform.position.x > minX)
             {
                 transform.position = new Vector2(transform.position.x - moveTransform, transform.position.y);
-            } else
+                direction = UnityEngine.Random.Range(3, 6);
+            } 
+            else
             {
                 direction = 5;
             }
@@ -76,14 +88,16 @@ public class DungeonGenerator : MonoBehaviour
             if (transform.position.y > minY)
             {
                 transform.position = new Vector2(transform.position.x, transform.position.y - moveTransform);
-            } else
+                direction = UnityEngine.Random.Range(1, 6);
+
+            }
+            else
             {   
                 // end of generation process 
                 stop = true;
             }
         }
         Instantiate(rooms[0], transform.position, Quaternion.identity);
-        direction = UnityEngine.Random.Range(1, 6);
     }
 
 }
