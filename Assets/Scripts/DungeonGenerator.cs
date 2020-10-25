@@ -16,6 +16,7 @@ public class DungeonGenerator : MonoBehaviour
     public GameObject[] dungeons;
     public LayerMask dugeonMask;
     public int dungeonLevelDepth;
+    public int pathDepth;
 
     private int direction;
     public float moveTransform;
@@ -65,6 +66,7 @@ public class DungeonGenerator : MonoBehaviour
         {
             if (transform.position.x < maxX)
             {
+                pathDepth = 0;
                 transform.position = new Vector2(transform.position.x + moveTransform, transform.position.y);
 
                 int dugeonType = UnityEngine.Random.Range(0, dungeons.Length);
@@ -98,6 +100,7 @@ public class DungeonGenerator : MonoBehaviour
         {   
             if (transform.position.x > minX)
             {
+                pathDepth = 0;
                 transform.position = new Vector2(transform.position.x - moveTransform, transform.position.y);
                 
                 int dugeonType = UnityEngine.Random.Range(2, 4);
@@ -121,13 +124,27 @@ public class DungeonGenerator : MonoBehaviour
         {
             if (transform.position.y > minY)
             {
+                pathDepth++;
+                dungeonLevelDepth++;
 
                 Collider2D collider = Physics2D.OverlapCircle(transform.position, 1, dugeonMask);
                 if (collider.GetComponent<Dungeon>().open != Dungeon.gates.LBR && collider.GetComponent<Dungeon>().open != Dungeon.gates.LTRB)
                 {
-                    collider.GetComponent<Dungeon>().selfDestruct();
-                    Instantiate(dungeons[3], transform.position, Quaternion.identity);
-                }
+                    if (pathDepth >= 2)
+                    {
+                        collider.GetComponent<Dungeon>().selfDestruct();
+                        Instantiate(dungeons[3], transform.position, Quaternion.identity);
+                    } else
+                    {
+                        collider.GetComponent<Dungeon>().selfDestruct();
+                        int dugeonType2 = UnityEngine.Random.Range(1, 4);
+                        if( dugeonType2 == 2)
+                        {
+                            dugeonType2 = 1;
+                        }
+                        Instantiate(dungeons[dugeonType2], transform.position, Quaternion.identity);
+                    }
+                } 
                 transform.position = new Vector2(transform.position.x, transform.position.y - moveTransform);
 
                 int dugeonType = UnityEngine.Random.Range(2, 4);
