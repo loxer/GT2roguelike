@@ -8,6 +8,13 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Battery.cs" t="Include" />
+          <e p="dungeon" t="Include">
+            <e p="spawnPoint.cs" t="Include" />
+          </e>
+          <e p="Dungeon.cs" t="Include" />
+          <e p="DungeonGenerator.cs" t="Include" />
+          <e p="EnemyFollow.cs" t="Include" />
+          <e p="nonPathDungeon.cs" t="Include" />
           <e p="WalkingCycle.cs" t="Include" />
         </e>
       </e>
