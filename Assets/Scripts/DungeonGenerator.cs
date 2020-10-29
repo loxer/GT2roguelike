@@ -34,8 +34,8 @@ public class DungeonGenerator : MonoBehaviour
     {
         int r = UnityEngine.Random.Range(0, startPos.Length);
         transform.position = startPos[r].position;
-        Instantiate(dungeons[0], transform.position, Quaternion.identity);
-
+        InstantiateDungeonRoom(dungeons[0]);
+        
         direction = UnityEngine.Random.Range(1, 6);
         nonPathDungeon = GetComponent<NonPathDungeon>();        
     }
@@ -71,7 +71,7 @@ public class DungeonGenerator : MonoBehaviour
                 transform.position = new Vector2(transform.position.x + moveTransform, transform.position.y);
 
                 int dugeonType = UnityEngine.Random.Range(0, dungeons.Length);
-                Instantiate(dungeons[dugeonType], transform.position, Quaternion.identity);
+                InstantiateDungeonRoom(dungeons[dugeonType]);
 
                 direction = UnityEngine.Random.Range(1, 6);
 
@@ -105,7 +105,7 @@ public class DungeonGenerator : MonoBehaviour
                 transform.position = new Vector2(transform.position.x - moveTransform, transform.position.y);
                 
                 int dugeonType = UnityEngine.Random.Range(2, 4);
-                Instantiate(dungeons[dugeonType], transform.position, Quaternion.identity);
+                InstantiateDungeonRoom(dungeons[dugeonType]);
 
                 direction = UnityEngine.Random.Range(3, 6);
 
@@ -134,7 +134,7 @@ public class DungeonGenerator : MonoBehaviour
                     if (pathDepth >= 2)
                     {
                         collider.GetComponent<Dungeon>().selfDestruct();
-                        Instantiate(dungeons[3], transform.position, Quaternion.identity);
+                        InstantiateDungeonRoom(dungeons[3]);
                     } else
                     {
                         collider.GetComponent<Dungeon>().selfDestruct();
@@ -143,23 +143,28 @@ public class DungeonGenerator : MonoBehaviour
                         {
                             dugeonType2 = 1;
                         }
-                        Instantiate(dungeons[dugeonType2], transform.position, Quaternion.identity);
+                        InstantiateDungeonRoom(dungeons[dugeonType2]);
                     }
                 } 
                 transform.position = new Vector2(transform.position.x, transform.position.y - moveTransform);
 
                 int dugeonType = UnityEngine.Random.Range(2, 4);
-                Instantiate(dungeons[dugeonType], transform.position, Quaternion.identity);
+                InstantiateDungeonRoom(dungeons[dugeonType]);
 
                 direction = UnityEngine.Random.Range(1, 6);
                     
             }
             else
             {   
-                // end of generation process 
+                // end of generation process
                 stop = true;
             }
         }
+    }
+
+    public void InstantiateDungeonRoom(UnityEngine.Object type)
+    {
+        Instantiate(type, transform.position, Quaternion.identity, transform.parent);
     }
 
     public bool DungeonGeneratorHasFinished()
@@ -173,5 +178,4 @@ public class DungeonGenerator : MonoBehaviour
             return false;
         }
     }
-
 }

@@ -15,7 +15,7 @@ public class NonPathDungeon : MonoBehaviour
         if (collider == null && dungeonGenerator.stop == true)
         {
             int r = UnityEngine.Random.Range(0, 4);
-            Instantiate(dungeonGenerator.dungeons[r], transform.position, Quaternion.identity);
+            Instantiate(dungeonGenerator.dungeons[r], transform.position, Quaternion.identity, transform.parent);
         }
         else
         {
