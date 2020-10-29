@@ -15,6 +15,7 @@ public class DungeonGenerator : MonoBehaviour
     public Transform[] startPos;
     public GameObject[] dungeons;
     public LayerMask dugeonMask;
+    private NonPathDungeon nonPathDungeon;
     public int dungeonLevelDepth;
     public int pathDepth;
 
@@ -36,6 +37,7 @@ public class DungeonGenerator : MonoBehaviour
         Instantiate(dungeons[0], transform.position, Quaternion.identity);
 
         direction = UnityEngine.Random.Range(1, 6);
+        nonPathDungeon = GetComponent<NonPathDungeon>();        
     }
 
     private void Update()
@@ -158,10 +160,18 @@ public class DungeonGenerator : MonoBehaviour
                 stop = true;
             }
         }
+    }
 
-
-
-        
+    public bool DungeonGeneratorHasFinished()
+    {        
+        if(nonPathDungeon.HasStopped() && stop)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 }
