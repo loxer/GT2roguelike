@@ -12,10 +12,12 @@ using System;
 
 public class DungeonGenerator : MonoBehaviour
 {
+    [SerializeField] private GameObject roomFolder;
     public Transform[] startPos;
-    public GameObject[] dungeons;
+    public GameObject[] dungeons;       // available room types for generating the map
+    private GameObject[] dungeonRooms;   // used rooms for the current map
     public LayerMask dugeonMask;
-    private NonPathDungeon nonPathDungeon;
+    private NonPathDungeon nonPathDungeon;    
     public int dungeonLevelDepth;
     public int pathDepth;
 
@@ -28,13 +30,16 @@ public class DungeonGenerator : MonoBehaviour
     public float minX;
     public float maxX;
     public float minY;
+    private int roomNumber = 0;
     public bool stop = false;
 
     private void Start()
     {
         int r = UnityEngine.Random.Range(0, startPos.Length);
         transform.position = startPos[r].position;
-        InstantiateDungeonRoom(dungeons[0]);
+        
+        GameObject[] dungeonRooms = new GameObject[startPos.Length];
+        InstantiateDungeonRoom(dungeons[0], transform.position);
         
         direction = UnityEngine.Random.Range(1, 6);
         nonPathDungeon = GetComponent<NonPathDungeon>();        
@@ -71,7 +76,7 @@ public class DungeonGenerator : MonoBehaviour
                 transform.position = new Vector2(transform.position.x + moveTransform, transform.position.y);
 
                 int dugeonType = UnityEngine.Random.Range(0, dungeons.Length);
-                InstantiateDungeonRoom(dungeons[dugeonType]);
+                InstantiateDungeonRoom(dungeons[dugeonType], transform.position);
 
                 direction = UnityEngine.Random.Range(1, 6);
 
@@ -105,7 +110,7 @@ public class DungeonGenerator : MonoBehaviour
                 transform.position = new Vector2(transform.position.x - moveTransform, transform.position.y);
                 
                 int dugeonType = UnityEngine.Random.Range(2, 4);
-                InstantiateDungeonRoom(dungeons[dugeonType]);
+                InstantiateDungeonRoom(dungeons[dugeonType], transform.position);
 
                 direction = UnityEngine.Random.Range(3, 6);
 
@@ -134,7 +139,7 @@ public class DungeonGenerator : MonoBehaviour
                     if (pathDepth >= 2)
                     {
                         collider.GetComponent<Dungeon>().selfDestruct();
-                        InstantiateDungeonRoom(dungeons[3]);
+                        InstantiateDungeonRoom(dungeons[3], transform.position);
                     } else
                     {
                         collider.GetComponent<Dungeon>().selfDestruct();
@@ -143,13 +148,13 @@ public class DungeonGenerator : MonoBehaviour
                         {
                             dugeonType2 = 1;
                         }
-                        InstantiateDungeonRoom(dungeons[dugeonType2]);
+                        InstantiateDungeonRoom(dungeons[dugeonType2], transform.position);
                     }
                 } 
                 transform.position = new Vector2(transform.position.x, transform.position.y - moveTransform);
 
                 int dugeonType = UnityEngine.Random.Range(2, 4);
-                InstantiateDungeonRoom(dungeons[dugeonType]);
+                InstantiateDungeonRoom(dungeons[dugeonType], transform.position);
 
                 direction = UnityEngine.Random.Range(1, 6);
                     
@@ -162,9 +167,12 @@ public class DungeonGenerator : MonoBehaviour
         }
     }
 
-    public void InstantiateDungeonRoom(UnityEngine.Object type)
+    public void InstantiateDungeonRoom(UnityEngine.Object type, Vector3 position)
     {
-        Instantiate(type, transform.position, Quaternion.identity, transform.parent);
+        /* Transform newRoom =  */Instantiate(type, position, Quaternion.identity, /* roomFolder. */transform.parent);
+        // dungeonRooms[roomNumber] = newRoom.gameObject;
+        // roomNumber++;
+        // print(newRoom);
     }
 
     public bool DungeonGeneratorHasFinished()
