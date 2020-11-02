@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class spawnPoint : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Start is called before the first frame update mostly copied from spawnPoint explaination video on youtube
     public GameObject[] objects;
     private void Start()
 
