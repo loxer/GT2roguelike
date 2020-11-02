@@ -30,8 +30,9 @@ public class DungeonGenerator : MonoBehaviour
     public float minX;
     public float maxX;
     public float minY;
-    private int roomNumber = 0;
     public bool stop = false;
+    private bool finished = false;
+    Camera camera;
 
 
     public void CreateRoom(int start, int end, bool random, Vector3 position)
@@ -41,23 +42,19 @@ public class DungeonGenerator : MonoBehaviour
         {
             dugeonType = UnityEngine.Random.Range(start, end);
         }
-
-        /* UnityEngine.Object newRoom =  */Instantiate(dungeons[dugeonType], position, Quaternion.identity, /* transform.parent */ roomFolder.transform /* transform.GetChild(0) */);
-
-        // dungeonRooms[roomNumber] = newRoom.gameObject;
-        // roomNumber++;
-        // print(newRoom);
+        Instantiate(dungeons[dugeonType], position, Quaternion.identity, roomFolder.transform);
     }
 
 
     private void Start()
     {
         int r = UnityEngine.Random.Range(0, startPos.Length);
-        transform.position = startPos[r].position;
-        GameObject[] dungeonRooms = new GameObject[startPos.Length];
+        transform.position = startPos[r].position;        
         CreateRoom(0, dungeons.Length, true, transform.position);
         direction = UnityEngine.Random.Range(1, 6);
-        nonPathDungeon = GetComponent<NonPathDungeon>();        
+        nonPathDungeon = GetComponent<NonPathDungeon>();
+        camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        camera.GoToNextDungeonRoom(transform.position);
     }
 
     private void Update()
@@ -71,6 +68,22 @@ public class DungeonGenerator : MonoBehaviour
         {
             time -= Time.deltaTime;
         }
+
+        // if(stop && DungeonGeneratorHasFinished() && !finished)
+        // {
+        //     dungeonRooms = new GameObject[roomFolder.transform.childCount];
+        //     for(int i = 0; i < dungeonRooms.Length; i++)
+        //     {
+        //         dungeonRooms[i] = roomFolder.transform.GetChild(i).gameObject;            
+        //         // platformTiles.Add(hexagon);
+        //         // allPlatformTiles[i] = hexagon;
+        //         if(i > 0)
+        //         {
+        //             dungeonRooms[i].SetActive(false);
+        //         }
+        //     }
+        //     finished = true;
+        // }
     }
 
    
@@ -190,7 +203,7 @@ public class DungeonGenerator : MonoBehaviour
 
     public bool DungeonGeneratorHasFinished()
     {        
-        if(nonPathDungeon.HasStopped() && stop)
+        if(nonPathDungeon.HasStopped())
         {
             return true;
         }
