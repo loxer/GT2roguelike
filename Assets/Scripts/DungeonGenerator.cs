@@ -42,7 +42,7 @@ public class DungeonGenerator : MonoBehaviour
             dugeonType = UnityEngine.Random.Range(start, end);
         }
 
-        /* UnityEngine.Object newRoom =  */Instantiate(dungeons[dugeonType], position, Quaternion.identity, transform.parent /* transform.GetChild(0) */);
+        /* UnityEngine.Object newRoom =  */Instantiate(dungeons[dugeonType], position, Quaternion.identity, /* transform.parent */ roomFolder.transform /* transform.GetChild(0) */);
 
         // dungeonRooms[roomNumber] = newRoom.gameObject;
         // roomNumber++;
