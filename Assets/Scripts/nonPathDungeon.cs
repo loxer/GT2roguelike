@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +10,12 @@ public class NonPathDungeon : MonoBehaviour
 
     private bool stop = false;
 
-    void Update()
+    
+   void Awake()
+   {
+       dungeonGenerator = FindObjectOfType<DungeonGenerator>();
+   }
+   void Update()
     {
         Collider2D collider = Physics2D.OverlapCircle(transform.position, 1, dugeonMask);
         if (collider == null && dungeonGenerator.stop == true)
