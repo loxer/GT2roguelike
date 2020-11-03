@@ -191,15 +191,6 @@ public class DungeonGenerator : MonoBehaviour
             }
         }
     }
-   
-
-    public void InstantiateDungeonRoom(UnityEngine.Object type, Vector3 position)
-    {
-        /* Transform newRoom =  */Instantiate(type, position, Quaternion.identity, /* roomFolder. */transform.parent);
-        // dungeonRooms[roomNumber] = newRoom.gameObject;
-        // roomNumber++;
-        // print(newRoom);
-    }
 
     public bool DungeonGeneratorHasFinished()
     {        
