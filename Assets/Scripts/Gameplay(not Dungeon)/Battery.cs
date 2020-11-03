@@ -24,7 +24,11 @@ public class Battery : MonoBehaviour
             battery.value -= 1;
         }
         fill.color =  gradient.Evaluate(battery.normalizedValue); //normalized Value returns a value between 0 and 1 
+    }
 
+    public float GetBattery()
+    {
+        return battery.value;
     }
     void Update()
     {

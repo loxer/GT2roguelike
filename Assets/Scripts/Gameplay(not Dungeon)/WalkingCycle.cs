@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Numerics;
+using UnityEngine.UI;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
@@ -14,11 +16,12 @@ public class WalkingCycle : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Rigidbody2D rb = default;
 
-    [SerializeField]
-    private Animator animator = default;
+    [SerializeField] private Animator animator = default;
+    [SerializeField] private Slider battery;
+    
     private Vector2 movement;
     private bool isMoving;
-
+    
     void FixedUpdate()
     {
         if (!isMoving)
@@ -62,5 +65,23 @@ public class WalkingCycle : MonoBehaviour
         transform.position = targetPos;
         isMoving = false;
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Akkufresser"))
+        {
+            battery.value -= 5f;
+        }
+
+        if (battery.value <= 0)
+        {
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        Destroy(gameObject);
+        Debug.Log("You Lost :( ");
+    }
 }
