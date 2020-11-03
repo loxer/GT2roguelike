@@ -32,7 +32,7 @@ public class DungeonGenerator : MonoBehaviour
     public float minY;
     public bool stop = false;
     private bool finished = false;
-    Camera camera;
+    CameraControl camera;
 
 
     public void CreateRoom(int start, int end, bool random, Vector3 position)
@@ -53,7 +53,7 @@ public class DungeonGenerator : MonoBehaviour
         CreateRoom(0, dungeons.Length, true, transform.position);
         direction = UnityEngine.Random.Range(1, 6);
         nonPathDungeon = GetComponent<NonPathDungeon>();
-        camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        camera = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
         camera.GoToNextDungeonRoom(transform.position);
     }
 

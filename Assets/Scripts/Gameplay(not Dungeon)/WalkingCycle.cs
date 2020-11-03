@@ -11,10 +11,8 @@ public class WalkingCycle : MonoBehaviour
     // https://www.youtube.com/watch?v=whzomFgjT50
     // tile based movement 
     // https://www.youtube.com/watch?v=_Pm16a18zy8
-    [SerializeField]
-    private float moveSpeed = 5f;
-    [SerializeField]
-    private Rigidbody2D rb = default;
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private Rigidbody2D rb = default;
 
     [SerializeField]
     private Animator animator = default;

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
+    // simple follow AI
+    // https://www.youtube.com/watch?v=rhoQd6IAtDo
 
     [SerializeField] private float enemySpeed = 3f;
     [SerializeField] private float howClose = 3f;
