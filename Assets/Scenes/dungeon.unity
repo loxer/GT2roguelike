@@ -164,6 +164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &23611557
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,6 +925,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &414955102
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,6 +972,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &419488959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,6 +1185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &625527159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,6 +1647,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &800686588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,6 +2039,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1010063690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,6 +2365,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1129762133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2384,6 +2412,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1140891228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,6 +2542,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1169098935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,6 +2575,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!4 &1169098937
 Transform:
   m_ObjectHideFlags: 0
@@ -2596,6 +2636,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1223179001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,6 +2683,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1224012343
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,6 +2896,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1293900533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3267,6 +3319,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1381706227
 GameObject:
   m_ObjectHideFlags: 0
@@ -3559,6 +3615,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1551977910
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,6 +4029,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1681558148
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,6 +4076,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1708906877
 GameObject:
   m_ObjectHideFlags: 0
@@ -4504,6 +4572,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1842839182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4879,6 +4951,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1966742503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4922,6 +4998,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &2034520852
 GameObject:
   m_ObjectHideFlags: 0
@@ -5297,6 +5377,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257c1342032141141bc08ebec5aebbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dugeonMask:
+    serializedVersion: 2
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &2117221699
 GameObject:
   m_ObjectHideFlags: 0
