@@ -27,7 +27,5 @@ public class GameCoordinator : MonoBehaviour
                 camera.GoToNextDungeonRoom(dungeonRooms[i].transform.position); // Start room
             }
         }
-
-        print("let's go");
     }
 }
