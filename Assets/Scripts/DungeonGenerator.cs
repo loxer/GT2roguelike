@@ -12,7 +12,7 @@ using System;
 
 public class DungeonGenerator : MonoBehaviour
 {
-    [SerializeField] private GameObject roomFolder;
+    [SerializeField] private GameObject roomFolder = default;
     public Transform[] startPos;
     public GameObject[] dungeons;       // available room types for generating the map
     private GameObject[] dungeonRooms;   // used rooms for the current map

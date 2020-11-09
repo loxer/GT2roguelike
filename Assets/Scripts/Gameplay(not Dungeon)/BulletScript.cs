@@ -7,8 +7,8 @@ public class BulletScript : MonoBehaviour
 {
 
     //https://www.youtube.com/watch?v=wkKsl1Mfp5M&t=711s
-    [SerializeField] private int damage;
-    [SerializeField] private GameObject impactEffect; 
+    [SerializeField] private int damage = default;
+    [SerializeField] private GameObject impactEffect = default; 
 
     private void OnTriggerEnter2D (Collider2D other)
     {

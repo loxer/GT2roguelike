@@ -14,14 +14,19 @@ public class WalkingCycle : MonoBehaviour
     // tile based movement 
     // https://www.youtube.com/watch?v=_Pm16a18zy8
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private Rigidbody2D rb = default;
-
-    [SerializeField] private Animator animator = default;
-    [SerializeField] private Slider battery;
+    //[SerializeField] private Rigidbody2D rb = default;
+   // [SerializeField] private GameObject enemy;
+    [SerializeField] private Animator animator  = default;
+    [SerializeField] private Slider battery = default;
     
     private Vector2 movement;
     private bool isMoving;
-    
+
+    /* void Start()
+     {
+         Physics2D.IgnoreCollision(enemy.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+     }*/
+
     void FixedUpdate()
     {
         if (!isMoving)
@@ -70,7 +75,13 @@ public class WalkingCycle : MonoBehaviour
     {
         if (other.CompareTag("Akkufresser"))
         {
+            Debug.Log("-5");
             battery.value -= 5f;
+        }
+        if (other.CompareTag("Steckdose"))
+        {
+            Debug.Log("+5");
+            battery.value += 5f;
         }
 
         if (battery.value <= 0)
