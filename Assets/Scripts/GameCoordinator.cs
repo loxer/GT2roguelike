@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class GameCoordinator : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Camera camera;
+
     void Start()
     {
-        
+        camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void DungeonGenerationFinished(GameObject[] dungeonRooms, GameObject dungeonGenerator)
     {
-        
+        // dungeonGenerator.gameObject.SetActive(false);
+        Destroy(dungeonGenerator);
+
+        for(int i = 0; i < dungeonRooms.Length; i++)
+        {
+            if(i > 0)
+            {
+                dungeonRooms[i].SetActive(false);
+            }
+            else
+            {
+                camera.GoToNextDungeonRoom(dungeonRooms[i].transform.position); // Start room
+            }
+        }
+
+        print("let's go");
     }
 }

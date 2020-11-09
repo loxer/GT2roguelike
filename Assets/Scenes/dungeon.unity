@@ -3982,6 +3982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomFolder: {fileID: 1064286451}
+  startPoints: {fileID: 365850552}
   startPos:
   - {fileID: 1491357645}
   - {fileID: 1157499611}
