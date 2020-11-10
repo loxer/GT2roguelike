@@ -12,12 +12,18 @@ using System;
 
 public class DungeonGenerator : MonoBehaviour
 {
-    [SerializeField] private GameObject roomFolder = default;
+
+    private const float TIME_TO_CHECK_AGAIN = 0.25f;
+
+    [SerializeField] private GameObject roomFolder;
+    [SerializeField] private GameObject startPoints;
+
     public Transform[] startPos;
     public GameObject[] dungeons;       // available room types for generating the map
-    private GameObject[] dungeonRooms;   // used rooms for the current map
+    private GameObject[] dungeonRooms;   // used rooms for the current map    
     public LayerMask dugeonMask;
-    private NonPathDungeon nonPathDungeon;    
+    private NonPathDungeon nonPathDungeon;
+    private GameCoordinator gameCoordinator;
     public int dungeonLevelDepth;
     public int pathDepth;
 
@@ -32,7 +38,9 @@ public class DungeonGenerator : MonoBehaviour
     public float minY;
     public bool stop = false;
     private bool finished = false;
+
     CameraControl camera;
+
 
 
     public void CreateRoom(int start, int end, bool random, Vector3 position)
@@ -53,9 +61,54 @@ public class DungeonGenerator : MonoBehaviour
         CreateRoom(0, dungeons.Length, true, transform.position);
         direction = UnityEngine.Random.Range(1, 6);
         nonPathDungeon = GetComponent<NonPathDungeon>();
+
         camera = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
         camera.GoToNextDungeonRoom(transform.position);
+
+        dungeonRooms = new GameObject[startPoints.transform.childCount];
+        gameCoordinator = this.transform.GetComponentInParent<GameCoordinator>();
+        
+        StartCoroutine(CheckForFinishedDungeonProcess());             
+
     }
+
+
+    private IEnumerator CheckForFinishedDungeonProcess()
+    {
+        while(!finished)
+        {
+            yield return new WaitForSeconds(TIME_TO_CHECK_AGAIN);            
+
+            if(stop && DungeonGeneratorHasFinished() && !finished)
+            {
+                if(roomFolder.transform.childCount >= startPoints.transform.childCount)
+                {
+                    bool noEmptyRooms = true;
+                    for(int i = 0; i < roomFolder.transform.childCount; i++)
+                    {
+                        GameObject currentRoom = roomFolder.transform.GetChild(i).gameObject;
+                        if(currentRoom.transform.childCount == 0)
+                        {
+                            Destroy(currentRoom);
+                            noEmptyRooms = false;
+                        }
+                    }
+
+                    if(noEmptyRooms && roomFolder.transform.childCount == startPoints.transform.childCount)
+                    {
+                        for(int i = 0; i < dungeonRooms.Length; i++)
+                        {
+                            dungeonRooms[i] = roomFolder.transform.GetChild(i).gameObject;
+                        }
+                        
+                        finished = true;
+                        gameCoordinator.DungeonGenerationFinished(dungeonRooms, this.gameObject);                        
+                    }
+                }
+            }
+        }
+    }
+    
 
     private void Update()
     {
@@ -67,23 +120,7 @@ public class DungeonGenerator : MonoBehaviour
         else
         {
             time -= Time.deltaTime;
-        }
-
-        // if(stop && DungeonGeneratorHasFinished() && !finished)
-        // {
-        //     dungeonRooms = new GameObject[roomFolder.transform.childCount];
-        //     for(int i = 0; i < dungeonRooms.Length; i++)
-        //     {
-        //         dungeonRooms[i] = roomFolder.transform.GetChild(i).gameObject;            
-        //         // platformTiles.Add(hexagon);
-        //         // allPlatformTiles[i] = hexagon;
-        //         if(i > 0)
-        //         {
-        //             dungeonRooms[i].SetActive(false);
-        //         }
-        //     }
-        //     finished = true;
-        // }
+        }        
     }
 
    
@@ -202,5 +239,5 @@ public class DungeonGenerator : MonoBehaviour
         {
             return false;
         }
-    }
+    }    
 }
