@@ -37,9 +37,6 @@ public class DungeonGenerator : MonoBehaviour
     public bool stop = false;
     private bool finished = false;
 
-    CameraControl cam;
-
-
 
     public void CreateRoom(int start, int end, bool random, Vector3 position)
     {
@@ -59,9 +56,6 @@ public class DungeonGenerator : MonoBehaviour
         CreateRoom(0, dungeons.Length, true, transform.position);
         direction = UnityEngine.Random.Range(1, 6);
         nonPathDungeon = GetComponent<NonPathDungeon>();
-
-        cam = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
-        cam.GoToNextDungeonRoom(transform.position);
 
         dungeonRooms = new GameObject[startPoints.transform.childCount];
         gameCoordinator = this.transform.GetComponentInParent<GameCoordinator>();

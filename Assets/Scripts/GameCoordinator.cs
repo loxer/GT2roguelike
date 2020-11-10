@@ -23,7 +23,7 @@ public class GameCoordinator : MonoBehaviour
             }
             else
             {
-                // camera.orthographicSize = 5.0f;
+                // cam.orthographicSize = 5.0f;
                 cam.GoToNextDungeonRoom(dungeonRooms[i].transform.position); // Start room
             }
         }
