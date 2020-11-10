@@ -166,8 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &23611557
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,8 +927,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &414955102
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,8 +974,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &419488959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,8 +1187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &625527159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,8 +1649,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &800686588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,7 +1954,7 @@ Camera:
   far clip plane: 1000
   field of view: 144
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 21
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1978,7 +1978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899740014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -8.9, z: -8.593814}
+  m_LocalPosition: {x: 5, y: 20, z: -8.593814}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2041,8 +2041,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1010063690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,8 +2367,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1129762133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,8 +2414,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1140891228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2544,8 +2544,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1169098935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,8 +2577,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!4 &1169098937
 Transform:
   m_ObjectHideFlags: 0
@@ -2638,8 +2638,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1223179001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,8 +2685,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1224012343
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,8 +2898,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1293900533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,8 +3321,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1381706227
 GameObject:
   m_ObjectHideFlags: 0
@@ -3617,8 +3617,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1551977910
 GameObject:
   m_ObjectHideFlags: 0
@@ -4079,8 +4079,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1708906877
 GameObject:
   m_ObjectHideFlags: 0
@@ -4575,8 +4575,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1842839182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4954,8 +4954,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &1966742503
 GameObject:
   m_ObjectHideFlags: 0
@@ -5001,8 +5001,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &2034520852
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,8 +5380,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 0
-  dungeonGenerator: {fileID: 0}
+    m_Bits: 256
+  dungeonGenerator: {fileID: 1676794045}
 --- !u!1 &2117221699
 GameObject:
   m_ObjectHideFlags: 0
