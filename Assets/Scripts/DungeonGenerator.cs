@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using System.IO;
 using System.ComponentModel;
@@ -15,8 +13,8 @@ public class DungeonGenerator : MonoBehaviour
 
     private const float TIME_TO_CHECK_AGAIN = 0.25f;
 
-    [SerializeField] private GameObject roomFolder;
-    [SerializeField] private GameObject startPoints;
+    [SerializeField] private GameObject roomFolder = default;
+    [SerializeField] private GameObject startPoints = default;
 
     public Transform[] startPos;
     public GameObject[] dungeons;       // available room types for generating the map
@@ -39,7 +37,7 @@ public class DungeonGenerator : MonoBehaviour
     public bool stop = false;
     private bool finished = false;
 
-    CameraControl camera;
+    CameraControl cam;
 
 
 
@@ -62,8 +60,8 @@ public class DungeonGenerator : MonoBehaviour
         direction = UnityEngine.Random.Range(1, 6);
         nonPathDungeon = GetComponent<NonPathDungeon>();
 
-        camera = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
-        camera.GoToNextDungeonRoom(transform.position);
+        cam = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
+        cam.GoToNextDungeonRoom(transform.position);
 
         dungeonRooms = new GameObject[startPoints.transform.childCount];
         gameCoordinator = this.transform.GetComponentInParent<GameCoordinator>();

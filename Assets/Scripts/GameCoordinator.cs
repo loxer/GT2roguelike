@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GameCoordinator : MonoBehaviour
 {
-    private CameraControl camera;
+    private CameraControl cam;
 
     void Start()
     {
-        camera = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
+        cam = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
     }
     
     public void DungeonGenerationFinished(GameObject[] dungeonRooms, GameObject dungeonGenerator)
@@ -24,7 +24,7 @@ public class GameCoordinator : MonoBehaviour
             }
             else
             {
-                camera.GoToNextDungeonRoom(dungeonRooms[i].transform.position); // Start room
+                cam.GoToNextDungeonRoom(dungeonRooms[i].transform.position); // Start room
             }
         }
     }
