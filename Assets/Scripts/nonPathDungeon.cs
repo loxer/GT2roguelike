@@ -5,16 +5,20 @@ using UnityEngine;
 
 public class NonPathDungeon : MonoBehaviour
 {
+    //private LayerMask dugeonMask;
+    //private DungeonGenerator dungeonGenerator;
+
     public LayerMask dugeonMask;
     public DungeonGenerator dungeonGenerator;
-
     private bool stop = false;
 
     
-   void Awake()
+ /*  void Start()
    {
-       dungeonGenerator = FindObjectOfType<DungeonGenerator>();
-   }
+       dugeonMask = LayerMask.GetMask("Dungeon");
+       dungeonGenerator = GameObject.FindWithTag("DungeonGenerator").GetComponent<DungeonGenerator>();
+   }*/
+   
    void Update()
     {
         Collider2D collider = Physics2D.OverlapCircle(transform.position, 1, dugeonMask);
