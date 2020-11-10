@@ -4032,8 +4032,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dugeonMask:
     serializedVersion: 2
-    m_Bits: 256
-  dungeonGenerator: {fileID: 1676794045}
+    m_Bits: 0
+  dungeonGenerator: {fileID: 0}
 --- !u!1 &1681558148
 GameObject:
   m_ObjectHideFlags: 0
