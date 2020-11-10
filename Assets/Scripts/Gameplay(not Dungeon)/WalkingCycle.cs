@@ -17,7 +17,7 @@ public class WalkingCycle : MonoBehaviour
     [SerializeField] private Rigidbody2D rb2D = default;
    // [SerializeField] private GameObject enemy;
     [SerializeField] private Animator animator  = default;
-    [SerializeField] private Slider battery = default;
+    // [SerializeField] private Slider battery = default;
     
     private Vector2 movement;
     private bool isMoving;
@@ -74,24 +74,24 @@ public class WalkingCycle : MonoBehaviour
     }
 
     //TODO extra script
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Akkufresser"))
-        {
-            Debug.Log("-5");
-            battery.value -= 5f;
-        }
-        if (other.CompareTag("Steckdose"))
-        {
-            Debug.Log("+5");
-            battery.value += 5f;
-        }
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.CompareTag("Akkufresser"))
+    //     {
+    //         Debug.Log("-5");
+    //         battery.value -= 5f;
+    //     }
+    //     if (other.CompareTag("Steckdose"))
+    //     {
+    //         Debug.Log("+5");
+    //         battery.value += 5f;
+    //     }
 
-        if (battery.value <= 0)
-        {
-            GameOver();
-        }
-    }
+    //     if (battery.value <= 0)
+    //     {
+    //         GameOver();
+    //     }
+    // }
 
     private void GameOver()
     {

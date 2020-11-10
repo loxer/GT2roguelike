@@ -69,7 +69,7 @@ public class DungeonGenerator : MonoBehaviour
     {
         while(!finished)
         {
-            yield return new WaitForSeconds(TIME_TO_CHECK_AGAIN);            
+            yield return new WaitForSeconds(TIME_TO_CHECK_AGAIN);
 
             if(stop && DungeonGeneratorHasFinished() && !finished)
             {

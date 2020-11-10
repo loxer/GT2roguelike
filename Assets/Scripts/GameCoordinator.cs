@@ -13,19 +13,25 @@ public class GameCoordinator : MonoBehaviour
     
     public void DungeonGenerationFinished(GameObject[] dungeonRooms, GameObject dungeonGenerator)
     {
-        dungeonGenerator.gameObject.SetActive(false);        
+        dungeonGenerator.gameObject.SetActive(false);
+        StartCoroutine(PrepareCameraPosition(dungeonRooms));        
+        
+    }
 
-        for(int i = 0; i < dungeonRooms.Length; i++)
+    private IEnumerator PrepareCameraPosition(GameObject[] dungeonRooms)
+    {
+        StartCoroutine(cam.StartingZoom(dungeonRooms[0].transform.position)); // Start room
+
+        while(!cam.IsInPosition())                      // check regularly if the starting zoom has finished
         {
-            if(i > 0)
-            {
-                dungeonRooms[i].SetActive(false);
-            }
-            else
-            {
-                // cam.orthographicSize = 5.0f;
-                cam.GoToNextDungeonRoom(dungeonRooms[i].transform.position); // Start room
-            }
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        yield return new WaitForSeconds(1f);            // give the player a second before something new happens
+        
+        for(int i = 1; i < dungeonRooms.Length; i++)
+        {
+            dungeonRooms[i].SetActive(false);           // make all rooms disappear (except the first one)
         }
     }
 }
