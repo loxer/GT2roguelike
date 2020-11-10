@@ -12,10 +12,12 @@ using System;
 
 public class DungeonGenerator : MonoBehaviour
 {
+
     private const float TIME_TO_CHECK_AGAIN = 0.25f;
 
     [SerializeField] private GameObject roomFolder;
     [SerializeField] private GameObject startPoints;
+
     public Transform[] startPos;
     public GameObject[] dungeons;       // available room types for generating the map
     private GameObject[] dungeonRooms;   // used rooms for the current map    
@@ -37,6 +39,10 @@ public class DungeonGenerator : MonoBehaviour
     public bool stop = false;
     private bool finished = false;
 
+    CameraControl camera;
+
+
+
     public void CreateRoom(int start, int end, bool random, Vector3 position)
     {
         int dugeonType = start;
@@ -55,10 +61,15 @@ public class DungeonGenerator : MonoBehaviour
         CreateRoom(0, dungeons.Length, true, transform.position);
         direction = UnityEngine.Random.Range(1, 6);
         nonPathDungeon = GetComponent<NonPathDungeon>();
+
+        camera = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
+        camera.GoToNextDungeonRoom(transform.position);
+
         dungeonRooms = new GameObject[startPoints.transform.childCount];
         gameCoordinator = this.transform.GetComponentInParent<GameCoordinator>();
         
         StartCoroutine(CheckForFinishedDungeonProcess());             
+
     }
 
 
