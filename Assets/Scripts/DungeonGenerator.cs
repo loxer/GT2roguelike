@@ -91,6 +91,7 @@ public class DungeonGenerator : MonoBehaviour
                         }
                         
                         finished = true;
+                        startPoints.SetActive(false);
                         gameCoordinator.DungeonGenerationFinished(dungeonRooms, this.gameObject);                        
                     }
                 }

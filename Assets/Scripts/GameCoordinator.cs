@@ -13,8 +13,7 @@ public class GameCoordinator : MonoBehaviour
     
     public void DungeonGenerationFinished(GameObject[] dungeonRooms, GameObject dungeonGenerator)
     {
-        // dungeonGenerator.gameObject.SetActive(false);
-        Destroy(dungeonGenerator);
+        dungeonGenerator.gameObject.SetActive(false);        
 
         for(int i = 0; i < dungeonRooms.Length; i++)
         {
@@ -24,6 +23,7 @@ public class GameCoordinator : MonoBehaviour
             }
             else
             {
+                // camera.orthographicSize = 5.0f;
                 camera.GoToNextDungeonRoom(dungeonRooms[i].transform.position); // Start room
             }
         }
