@@ -6,23 +6,54 @@ public class GameCoordinator : MonoBehaviour
 {
     private CameraControl cam;
     private GameObject player;
+    private GameObject[] dungeonRooms;
+    private GameObject currentRoom;
+    
+    private bool gameStatusChange = false;
+    private bool gameRunning = false;
+    
 
     void Start()
     {
         cam = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
         player = GameObject.FindWithTag("Player");
     }
+
+    void Update()
+    {
+        if(gameStatusChange)
+        {
+            if(gameRunning)
+            {
+                DisablePlayer();
+                gameRunning = false;
+            }
+            else
+            {
+                EnablePlayer();
+                gameRunning = true;
+            }
+
+            gameStatusChange = false;
+        }
+
+        if(gameRunning)
+        {
+            CheckForRoomChange();
+        }        
+    }
     
     public void DungeonGenerationFinished(GameObject[] dungeonRooms, GameObject dungeonGenerator)
     {
         dungeonGenerator.gameObject.SetActive(false);
-        StartCoroutine(PrepareCameraPosition(dungeonRooms));        
-        
+        this.dungeonRooms = dungeonRooms;
+        currentRoom = dungeonRooms[0];
+        StartCoroutine(PrepareCameraPosition());        
     }
 
-    private IEnumerator PrepareCameraPosition(GameObject[] dungeonRooms)
+    private IEnumerator PrepareCameraPosition()
     {
-        StartCoroutine(cam.StartingZoom(dungeonRooms[0].transform.position)); // Start room
+        StartCoroutine(cam.StartingZoom(currentRoom.transform.position)); // Start room
 
         while(!cam.IsInPosition())                      // check regularly if the starting zoom has finished
         {
@@ -36,13 +67,55 @@ public class GameCoordinator : MonoBehaviour
             dungeonRooms[i].SetActive(false);           // make all rooms disappear (except the first one)
         }
 
-        PreparePlayer(dungeonRooms[0].transform.position);
+        player.transform.position = currentRoom.transform.position;
+        EnablePlayer();
+        gameStatusChange = true;
     }
 
-    private void PreparePlayer(Vector3 startingPosition)
-    {
-        player.transform.position = startingPosition;
+    private void EnablePlayer()
+    {        
         player.GetComponent<WalkingCycle>().enabled = true;
-        player.GetComponent<PlayerShoot>().enabled = true;
+        player.GetComponent<PlayerShoot>().enabled = true;        
     }
+
+    private void DisablePlayer()
+    {        
+        player.GetComponent<WalkingCycle>().enabled = false;
+        player.GetComponent<PlayerShoot>().enabled = false;        
+    }
+
+    private void CheckForRoomChange()
+    {
+        // player goes right
+        if(player.transform.position.x > currentRoom.transform.position.x + 5)
+        {
+
+            gameStatusChange = true;
+            print("player goes right");
+        }
+
+        // player goes left
+        if(player.transform.position.x < currentRoom.transform.position.x - 5)
+        {
+
+            gameStatusChange = true;
+            print("player goes left");
+        }
+
+        // player goes up
+        if(player.transform.position.y > currentRoom.transform.position.y + 5)
+        {
+
+            gameStatusChange = true;
+            print("player goes up");
+        }
+
+        // player goes down
+        if(player.transform.position.y < currentRoom.transform.position.y - 5)
+        {
+
+            gameStatusChange = true;
+            print("player goes down");
+        }
+    }    
 }

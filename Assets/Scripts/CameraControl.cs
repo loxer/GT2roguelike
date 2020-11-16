@@ -5,8 +5,8 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {    
     [SerializeField] private float zoomInSpeed = 2f;
+    [SerializeField] private float goToRoomSpeed = 2f;
 
-    private const float TRANSLATE_TO_NEXT_ROOM_SPEED = 2f;    
     private const float ZOOM_IN_WAITING_TIME = 1f;
     private const float ORTHOGRAPHIC_SIZE_FOR_ROOM = 5.0f;
 
@@ -36,6 +36,26 @@ public class CameraControl : MonoBehaviour
 
             // check if the camera arrived all positions
             if(transform.position == roomPosition && Camera.main.orthographicSize == ORTHOGRAPHIC_SIZE_FOR_ROOM)
+            {
+                cameraInPosition = true;
+            }
+        }
+    }
+
+    public IEnumerator GoToRoom(Vector3 roomPosition)
+    {        
+        cameraInPosition = false;
+        
+        while(!cameraInPosition)
+        {
+            // just update as often as possible to make the transition smooth
+            yield return new WaitForSeconds(0.0001f); 
+
+            // translate the cam to the first room
+            transform.position = Vector3.MoveTowards(transform.position, roomPosition, Time.deltaTime * goToRoomSpeed);
+            
+            // check if the camera arrived all positions
+            if(transform.position == roomPosition)
             {
                 cameraInPosition = true;
             }

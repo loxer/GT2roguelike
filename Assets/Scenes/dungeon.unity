@@ -1996,7 +1996,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcf0311cff201441923f45569f57ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomInSpeed: 2
+  zoomInSpeed: 15
+  goToRoomSpeed: 2
 --- !u!1 &986154452
 GameObject:
   m_ObjectHideFlags: 0
