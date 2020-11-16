@@ -17,7 +17,7 @@ public class WalkingCycle : MonoBehaviour
     [SerializeField] private Rigidbody2D rb2D = default;
    // [SerializeField] private GameObject enemy;
     [SerializeField] private Animator animator  = default;
-    // [SerializeField] private Slider battery = default;
+    //
     
     private Vector2 movement;
     private bool isMoving;

@@ -128,15 +128,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1346314305, guid: 86ae4f43ce1459e49be120072a26c994, type: 3}
+      propertyPath: battery
+      value: 
+      objectReference: {fileID: 569820630}
     - target: {fileID: 3417239490530627723, guid: 86ae4f43ce1459e49be120072a26c994,
         type: 3}
       propertyPath: m_Name
       value: idle_0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3417239490530627725, guid: 86ae4f43ce1459e49be120072a26c994,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3417239490530627726, guid: 86ae4f43ce1459e49be120072a26c994,
         type: 3}
@@ -193,11 +192,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3417239490530627727, guid: 86ae4f43ce1459e49be120072a26c994,
-        type: 3}
-      propertyPath: battery
-      value: 
-      objectReference: {fileID: 569820630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86ae4f43ce1459e49be120072a26c994, type: 3}
 --- !u!1 &161333271
@@ -300,7 +294,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 391870708849038431, guid: c9a694446a83fe34997984cf82e49654,
     type: 3}
   bulletSpeed: 5
-  Bulletstart: {fileID: 1958642966}
+  bulletStart: {fileID: 1958642966}
 --- !u!1 &180949603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,38 +1223,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1452729737 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4306551248581645389, guid: 96e23ed0f8786ca40841998b24dcf949,
-    type: 3}
-  m_PrefabInstance: {fileID: 240215682}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1452729742
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1452729737}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.07907106, y: -0.045194358}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.14, y: 0.1}
-    newSize: {x: 0.14, y: 0.1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2981421, y: 0.19038871}
-  m_EdgeRadius: 0
 --- !u!1 &1958642966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3417239491616761236, guid: 86ae4f43ce1459e49be120072a26c994,
@@ -1397,11 +1359,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8821757165359741875, guid: ccde355fa27640f4baf68c00e56b94de,
-        type: 3}
-      propertyPath: howClose
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8821757165359741879, guid: ccde355fa27640f4baf68c00e56b94de,
         type: 3}
