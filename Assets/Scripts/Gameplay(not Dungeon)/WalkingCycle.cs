@@ -46,15 +46,14 @@ public class WalkingCycle : MonoBehaviour
     {
         if (!isMoving)
         {
-            
-            
             if (movement != Vector2.zero)
             {
                 var targetPos = transform.position;
                 targetPos.x += movement.x;
                 targetPos.y += movement.y;
 
-                StartCoroutine(Move(targetPos));
+                transform.position = targetPos;
+                // StartCoroutine(Move(targetPos));
             }
         }
     }
