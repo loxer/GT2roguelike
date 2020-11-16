@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {    
-    private const float TRANSLATE_TO_NEXT_ROOM_SPEED = 2f;
-    private const float ZOOM_IN_SPEED = 2f;
+    [SerializeField] private float zoomInSpeed = 2f;
+
+    private const float TRANSLATE_TO_NEXT_ROOM_SPEED = 2f;    
     private const float ZOOM_IN_WAITING_TIME = 1f;
     private const float ORTHOGRAPHIC_SIZE_FOR_ROOM = 5.0f;
 
@@ -22,10 +23,10 @@ public class CameraControl : MonoBehaviour
             yield return new WaitForSeconds(0.0001f); 
 
             // translate the cam to the first room
-            transform.position = Vector3.MoveTowards(transform.position, roomPosition, Time.deltaTime * ZOOM_IN_SPEED);
+            transform.position = Vector3.MoveTowards(transform.position, roomPosition, Time.deltaTime * zoomInSpeed);
 
             // reduce the orthographicSize, which makes the zoom-in effect
-            Camera.main.orthographicSize = Camera.main.orthographicSize - (Time.deltaTime * ZOOM_IN_SPEED * 0.65f);
+            Camera.main.orthographicSize = Camera.main.orthographicSize - (Time.deltaTime * zoomInSpeed * 0.65f);
             
             // make sure it's not zooming too much
             if(Camera.main.orthographicSize < ORTHOGRAPHIC_SIZE_FOR_ROOM)
