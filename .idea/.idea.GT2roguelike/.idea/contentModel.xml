@@ -20,6 +20,7 @@
             <e p="EnemyDamage.cs" t="Include" />
             <e p="EnemyFollow.cs" t="Include" />
             <e p="PlayerShoot.cs" t="Include" />
+            <e p="PointAndShoot.cs" t="Include" />
             <e p="WalkingCycle.cs" t="Include" />
           </e>
           <e p="MapValues.cs" t="Include" />
