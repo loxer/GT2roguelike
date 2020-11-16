@@ -8,7 +8,7 @@ public class DisCharge : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Akkufresser"))
+        if (other.CompareTag("Akkufresser") /*|| other.CompareTag("PopUp")*/)
         {
             Debug.Log("-5");
             battery.value -= 5f;
