@@ -7,10 +7,10 @@ public class PointAndShoot : MonoBehaviour
 {
     // https://www.youtube.com/watch?v=7-8nE9_FwWs
     private Vector3 target;
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject player = default;
+    [SerializeField] private GameObject bulletPrefab = default;
     [SerializeField] private float bulletSpeed = 60;
-    [SerializeField] private GameObject bulletStart; 
+    [SerializeField] private GameObject bulletStart = default; 
     void Update()
     {
         // as long as the player is still alive

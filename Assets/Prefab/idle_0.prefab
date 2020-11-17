@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3417239490530627724}
   - component: {fileID: 116455687393486220}
   - component: {fileID: 1346314305}
+  - component: {fileID: 6233017895857785945}
   m_Layer: 0
   m_Name: idle_0
   m_TagString: Player
@@ -215,6 +216,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battery: {fileID: 0}
+--- !u!114 &6233017895857785945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3417239490530627723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486c70fb58fbea24d83e4ac596946026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainCamera: {fileID: 0}
 --- !u!1 &3417239491616761236
 GameObject:
   m_ObjectHideFlags: 0
