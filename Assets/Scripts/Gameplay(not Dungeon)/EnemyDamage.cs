@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     //https://www.youtube.com/watch?v=wkKsl1Mfp5M&t=711s
-    [SerializeField] private int health = 90;
+    [SerializeField] private int health = 100;
     //[SerializeField] private GameObject deathEffect;
     //TODO public ist nicht so schön
     public void TakeDamage(int damage) 

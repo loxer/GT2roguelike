@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 7b9560717e1d50343a27183d1b5e1bd1
+guid: 824e64743950b3c49a4e11d8d659a7f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6678063791195492299
-    second: boss_dead_0
+      213: -273663733961347849
+    second: boss_intro_stage2_0
   - first:
-      213: -3797656694030572472
-    second: boss_dead_1
+      213: 3754991427349564606
+    second: boss_intro_stage2_1
+  - first:
+      213: 1791220896573664734
+    second: boss_intro_stage2_2
+  - first:
+      213: 26919992556932999
+    second: boss_intro_stage2_3
+  - first:
+      213: -2718564950675525863
+    second: boss_intro_stage2_4
+  - first:
+      213: 8592330839349817569
+    second: boss_intro_stage2_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -129,12 +141,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss_dead_0
+      name: boss_intro_stage2_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 33
-        width: 28
+        x: 15
+        y: 129
+        width: 29
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -143,19 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 530f4622d50c253a0800000000000000
-      internalID: -6678063791195492299
+      spriteID: 7fca35da840c33cf0800000000000000
+      internalID: -273663733961347849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_dead_1
+      name: boss_intro_stage2_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 28
+        x: 79
+        y: 129
+        width: 29
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -164,8 +176,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8446c6d8b530c4bc0800000000000000
-      internalID: -3797656694030572472
+      spriteID: ebccec1fec86c1430800000000000000
+      internalID: 3754991427349564606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_intro_stage2_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 65
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edda7864ae1bbd810800000000000000
+      internalID: 1791220896573664734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_intro_stage2_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 65
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f46b13793af5000800000000000000
+      internalID: 26919992556932999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_intro_stage2_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f6828b497b54ad0800000000000000
+      internalID: -2718564950675525863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_intro_stage2_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e07410df571e3770800000000000000
+      internalID: 8592330839349817569
       vertices: []
       indices: 
       edges: []
