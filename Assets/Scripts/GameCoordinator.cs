@@ -17,7 +17,7 @@ public class GameCoordinator : MonoBehaviour
     {
         cam = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
         player = GameObject.FindWithTag("Player");
-        print(player);
+        player.GetComponent<DisCharge>().SetGameCoordinator(this);
     }
 
     void Update()
@@ -66,8 +66,10 @@ public class GameCoordinator : MonoBehaviour
         for(int i = 1; i < dungeonRooms.Length; i++)
         {
             dungeonRooms[i].SetActive(false);           // make all rooms disappear (except the first one)
+            dungeonRooms[i].transform.GetChild(0).GetComponent<Collider2D>().enabled = false;
         }
 
+        currentRoom.transform.GetChild(0).GetComponent<Collider2D>().enabled = false;
         player.transform.position = currentRoom.transform.position;        
         gameStatusChange = true;
     }
@@ -260,5 +262,10 @@ public class GameCoordinator : MonoBehaviour
 
         yield return new WaitForSeconds(1f);            // give the player a second before something new happens
         gameStatusChange = true;
+    }
+
+    public void PlayerDead()
+    {
+        Debug.Log("Player died");
     }
 }

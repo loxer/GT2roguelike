@@ -5,6 +5,15 @@ using UnityEngine.UI;
 public class DisCharge : MonoBehaviour
 {
     public Slider battery = default;
+    private GameCoordinator gameCoordinator;
+
+    void Update()
+    {
+        if (battery.value <= 0)
+        {
+            GameOver();
+        }
+    }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,17 +31,18 @@ public class DisCharge : MonoBehaviour
         {
             Debug.Log("+5");
             battery.value += 5f;
-        }
-
-        if (battery.value <= 0)
-        {
-            GameOver();
-        }
+        }       
     }
     
     private void GameOver()
     {
-        Destroy(gameObject);
-        Debug.Log("You Lost :( ");
+        this.gameObject.SetActive(false);
+        // Destroy(gameObject);
+        gameCoordinator.PlayerDead();
+    }
+
+    public void SetGameCoordinator(GameCoordinator gameCoordinator)
+    {
+        this.gameCoordinator = gameCoordinator;
     }
 }
