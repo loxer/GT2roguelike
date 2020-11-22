@@ -6,9 +6,6 @@
     <e p="C:\Users\mcflu\git\GT2roguelike" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="DisCharge.cs" t="Include" />
-        <e p="KeepCharacterOnScreen.cs" t="Include" />
-        <e p="rbmovement.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CameraControl.cs" t="Include" />
           <e p="dungeon" t="Include">
@@ -18,13 +15,29 @@
           <e p="DungeonGenerator.cs" t="Include" />
           <e p="GameCoordinator.cs" t="Include" />
           <e p="Gameplay(not Dungeon)" t="Include">
-            <e p="Battery.cs" t="Include" />
-            <e p="BulletScript.cs" t="Include" />
-            <e p="EnemyDamage.cs" t="Include" />
-            <e p="EnemyFollow.cs" t="Include" />
-            <e p="PlayerShoot.cs" t="Include" />
-            <e p="PointAndShoot.cs" t="Include" />
-            <e p="WalkingCycle.cs" t="Include" />
+            <e p="BossBattle" t="Include">
+              <e p="BossScript.cs" t="Include" />
+              <e p="DeathBehaviour.cs" t="Include" />
+              <e p="IdleBehaviour.cs" t="Include" />
+              <e p="IntroBehaviour.cs" t="Include" />
+              <e p="JumpBehaviour.cs" t="Include" />
+            </e>
+            <e p="Enemy" t="Include">
+              <e p="EnemyDamage.cs" t="Include" />
+              <e p="EnemyFollow.cs" t="Include" />
+            </e>
+            <e p="KeepCharacterOnScreen.cs" t="Include" />
+            <e p="Player" t="Include">
+              <e p="Battery.cs" t="Include" />
+              <e p="BulletScript.cs" t="Include" />
+              <e p="DisCharge.cs" t="Include" />
+              <e p="old_scripts" t="Include">
+                <e p="PlayerShoot.cs" t="Include" />
+                <e p="WalkingCycle.cs" t="Include" />
+              </e>
+              <e p="PointAndShoot.cs" t="Include" />
+              <e p="rbmovement.cs" t="Include" />
+            </e>
           </e>
           <e p="MapValues.cs" t="Include" />
           <e p="noiseGenerator.cs" t="Include" />

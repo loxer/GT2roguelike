@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class DisCharge : MonoBehaviour
 {
-    [SerializeField] private Slider battery = default;
+    public Slider battery = default;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -12,6 +12,11 @@ public class DisCharge : MonoBehaviour
         {
             Debug.Log("-5");
             battery.value -= 5f;
+        }
+        if (other.CompareTag("Boss"))
+        {
+            Debug.Log("-10");
+            battery.value -= 10f;
         }
         if (other.CompareTag("Steckdose"))
         {

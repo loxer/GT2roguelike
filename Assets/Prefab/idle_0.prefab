@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 3417239490530627721}
   - component: {fileID: 3417239490530627720}
   - component: {fileID: 3417239490530627826}
-  - component: {fileID: 3417239490530627727}
-  - component: {fileID: 3417239490530627725}
   - component: {fileID: 3417239490530627724}
   - component: {fileID: 116455687393486220}
   - component: {fileID: 1346314305}
@@ -136,36 +134,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.6875}
   m_EdgeRadius: 0
---- !u!114 &3417239490530627727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3417239490530627723}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f615225021430f643b05be48ced71186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
-  rb2D: {fileID: 3417239490530627724}
-  animator: {fileID: 3417239490530627720}
---- !u!114 &3417239490530627725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3417239490530627723}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdab6fe7149ad224aa1b6bcacdacd495, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 391870708849038431, guid: c9a694446a83fe34997984cf82e49654, type: 3}
-  firePoint: {fileID: 3417239491616761237}
-  bulletSpeed: 5
 --- !u!50 &3417239490530627724
 Rigidbody2D:
   serializedVersion: 4
