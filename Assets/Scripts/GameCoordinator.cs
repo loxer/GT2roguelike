@@ -17,6 +17,7 @@ public class GameCoordinator : MonoBehaviour
     {
         cam = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
         player = GameObject.FindWithTag("Player");
+        print(player);
     }
 
     void Update()
@@ -73,14 +74,17 @@ public class GameCoordinator : MonoBehaviour
 
     private void EnablePlayer()
     {        
-        player.GetComponent<WalkingCycle>().enabled = true;
-        player.GetComponent<PlayerShoot>().enabled = true;        
+        player.GetComponent<rbmovement>().enabled = true;
+        player.GetComponent<DisCharge>().enabled = true;  
+        player.GetComponent<KeepCharacterOnScreen>().enabled = true;        
+
     }
 
     private void DisablePlayer()
     {        
-        player.GetComponent<WalkingCycle>().enabled = false;
-        player.GetComponent<PlayerShoot>().enabled = false;        
+        player.GetComponent<rbmovement>().enabled = false;
+        player.GetComponent<DisCharge>().enabled = false;  
+        player.GetComponent<KeepCharacterOnScreen>().enabled = false;       
     }
 
     private void CheckForRoomChange()
