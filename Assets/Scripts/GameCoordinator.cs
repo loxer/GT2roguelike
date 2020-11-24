@@ -43,6 +43,11 @@ public class GameCoordinator : MonoBehaviour
             CheckForRoomChange();
         }        
     }
+
+    private void GameStatusChange()
+    {
+        gameStatusChange = true;
+    }
     
     public void DungeonGenerationFinished(GameObject[] dungeonRooms, GameObject dungeonGenerator)
     {
@@ -54,7 +59,7 @@ public class GameCoordinator : MonoBehaviour
 
     private IEnumerator PrepareCameraPosition()
     {
-        StartCoroutine(cam.StartingZoom(currentRoom.transform.position)); // Start room
+        cam.ZoomIn(currentRoom.transform.position); // Start room
 
         while(!cam.IsInPosition())                      // check regularly if the starting zoom has finished
         {
@@ -70,8 +75,9 @@ public class GameCoordinator : MonoBehaviour
         }
 
         currentRoom.transform.GetChild(0).GetComponent<Collider2D>().enabled = false;
-        player.transform.position = currentRoom.transform.position;        
-        gameStatusChange = true;
+        player.transform.position = currentRoom.transform.position;
+        player.GetComponent<DisCharge>().GameStarted();
+        GameStatusChange();
     }
 
     private void EnablePlayer()
@@ -87,6 +93,13 @@ public class GameCoordinator : MonoBehaviour
         player.GetComponent<rbmovement>().enabled = false;
         player.GetComponent<DisCharge>().enabled = false;  
         player.GetComponent<KeepCharacterOnScreen>().enabled = false;       
+    }
+
+    public void PlayerDead()
+    {
+        GameStatusChange();
+        cam.ZoomOut();
+        Debug.Log("Player died");
     }
 
     private void CheckForRoomChange()
@@ -239,7 +252,7 @@ public class GameCoordinator : MonoBehaviour
 
         if(newRoom)
         {
-            gameStatusChange = true;
+            GameStatusChange();
             StartCoroutine(NewRoom());
         }
     }
@@ -261,11 +274,6 @@ public class GameCoordinator : MonoBehaviour
         currentRoom.SetActive(true);
 
         yield return new WaitForSeconds(1f);            // give the player a second before something new happens
-        gameStatusChange = true;
-    }
-
-    public void PlayerDead()
-    {
-        Debug.Log("Player died");
+        GameStatusChange();
     }
 }

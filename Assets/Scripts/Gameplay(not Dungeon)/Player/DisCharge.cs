@@ -37,8 +37,14 @@ public class DisCharge : MonoBehaviour
     private void GameOver()
     {
         this.gameObject.SetActive(false);
-        // Destroy(gameObject);
         gameCoordinator.PlayerDead();
+    }
+
+    public void GameStarted()
+    {
+        this.gameObject.SetActive(true);
+        battery.value = 100;
+        Debug.Log("Get full battery");
     }
 
     public void SetGameCoordinator(GameCoordinator gameCoordinator)
