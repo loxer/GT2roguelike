@@ -8,10 +8,9 @@ public class GameCoordinator : MonoBehaviour
     private GameObject player;
     private GameObject[] dungeonRooms;
     private GameObject currentRoom;
+    private GameObject dungeonGenerator;
     
     private bool gameStatusChange = false;
-    private bool gameRunning = false;
-    
 
     void Start()
     {
@@ -24,21 +23,21 @@ public class GameCoordinator : MonoBehaviour
     {
         if(gameStatusChange)
         {
-            if(gameRunning)
+            if(Game.isRunning)
             {
                 DisablePlayer();
-                gameRunning = false;
+                Game.isRunning = false;
             }
             else
             {
                 EnablePlayer();
-                gameRunning = true;
+                Game.isRunning = true;
             }
 
             gameStatusChange = false;
         }
 
-        if(gameRunning)
+        if(Game.isRunning)
         {
             CheckForRoomChange();
         }        
@@ -51,9 +50,12 @@ public class GameCoordinator : MonoBehaviour
     
     public void DungeonGenerationFinished(GameObject[] dungeonRooms, GameObject dungeonGenerator)
     {
-        dungeonGenerator.gameObject.SetActive(false);
+        this.dungeonGenerator = dungeonGenerator;
+        dungeonGenerator.SetActive(false);
+
         this.dungeonRooms = dungeonRooms;
-        currentRoom = dungeonRooms[0];
+        currentRoom = dungeonRooms[UnityEngine.Random.Range(0, dungeonRooms.Length)];
+
         StartCoroutine(PrepareCameraPosition());        
     }
 
@@ -68,13 +70,13 @@ public class GameCoordinator : MonoBehaviour
         
         yield return new WaitForSeconds(1f);            // give the player a second before something new happens
         
-        for(int i = 1; i < dungeonRooms.Length; i++)
+        for(int i = 0; i < dungeonRooms.Length; i++)
         {
             dungeonRooms[i].SetActive(false);           // make all rooms disappear (except the first one)
             dungeonRooms[i].transform.GetChild(0).GetComponent<Collider2D>().enabled = false;
         }
 
-        currentRoom.transform.GetChild(0).GetComponent<Collider2D>().enabled = false;
+        currentRoom.SetActive(true);
         player.transform.position = currentRoom.transform.position;
         player.GetComponent<DisCharge>().GameStarted();
         GameStatusChange();
@@ -97,9 +99,32 @@ public class GameCoordinator : MonoBehaviour
 
     public void PlayerDead()
     {
-        GameStatusChange();
+        GameStatusChange();        
+        StartCoroutine(PrepareRestart());        
+    }
+
+    private IEnumerator PrepareRestart()
+    {
+        DisablePlayer();
+        
+        yield return new WaitForSeconds(1f);            // give the player a second to realize what just happened
+
         cam.ZoomOut();
-        Debug.Log("Player died");
+
+        while(!cam.IsInPosition())                      // check regularly if the starting zoom has finished
+        {
+            yield return new WaitForSeconds(0.05f);
+        }
+       
+        yield return new WaitForSeconds(1f);            // give the player a second before something new happens
+        
+        for(int i = 0; i < dungeonRooms.Length; i++)
+        {
+            Destroy(dungeonRooms[i]);
+        }
+
+        dungeonGenerator.SetActive(true);
+        dungeonGenerator.GetComponent<DungeonGenerator>().CreateNewOne();
     }
 
     private void CheckForRoomChange()

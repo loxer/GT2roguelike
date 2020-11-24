@@ -60,8 +60,7 @@ public class DungeonGenerator : MonoBehaviour
         dungeonRooms = new GameObject[startPoints.transform.childCount];
         gameCoordinator = this.transform.GetComponentInParent<GameCoordinator>();
         
-        StartCoroutine(CheckForFinishedDungeonProcess());             
-
+        StartCoroutine(CheckForFinishedDungeonProcess());
     }
 
 
@@ -232,5 +231,13 @@ public class DungeonGenerator : MonoBehaviour
         {
             return false;
         }
-    }    
+    }
+
+    public void CreateNewOne()
+    {
+        finished = false;
+        stop = false;
+        startPoints.SetActive(true);
+        StartCoroutine(CheckForFinishedDungeonProcess());
+    }
 }

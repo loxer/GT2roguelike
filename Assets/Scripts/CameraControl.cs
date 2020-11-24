@@ -32,8 +32,8 @@ public class CameraControl : MonoBehaviour
 
     private IEnumerator Zoom(Vector3 position, bool zoomIn)
     {
-        yield return new WaitForSeconds(ZOOM_IN_WAITING_TIME);
         cameraInPosition = false;
+        yield return new WaitForSeconds(ZOOM_IN_WAITING_TIME);
         
         while(!cameraInPosition)
         {
@@ -71,11 +71,20 @@ public class CameraControl : MonoBehaviour
             }            
 
             // check if the camera arrived all positions
-            if(transform.position == position && 
-                (zoomIn && Camera.main.orthographicSize == ORTHOGRAPHIC_SIZE_FOR_ROOM) ||
-                (!zoomIn && Camera.main.orthographicSize == zoomOutOrthographicSize))
+            if(zoomIn) 
             {
-                cameraInPosition = true;
+                if(transform.position == position && Camera.main.orthographicSize == ORTHOGRAPHIC_SIZE_FOR_ROOM)
+                {
+                    cameraInPosition = true;
+                }
+            }
+            else
+            {
+                if(transform.position == position && Camera.main.orthographicSize == zoomOutOrthographicSize)
+                {
+                    cameraInPosition = true;
+                    print("Camera in Position");
+                }
             }
         }
     }

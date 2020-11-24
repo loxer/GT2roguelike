@@ -11,7 +11,7 @@ public class DisCharge : MonoBehaviour
     {
         if (battery.value <= 0)
         {
-            GameOver();
+            StartCoroutine(GameOver());
         }
     }
     
@@ -34,17 +34,21 @@ public class DisCharge : MonoBehaviour
         }       
     }
     
-    private void GameOver()
+    private IEnumerator GameOver()
     {
-        this.gameObject.SetActive(false);
         gameCoordinator.PlayerDead();
+
+        yield return new WaitForSeconds(2f);            // give the player a moment to realize what just happened
+        
+        this.gameObject.SetActive(false);
+        battery.gameObject.SetActive(false);
     }
 
     public void GameStarted()
     {
         this.gameObject.SetActive(true);
+        battery.gameObject.SetActive(true);
         battery.value = 100;
-        Debug.Log("Get full battery");
     }
 
     public void SetGameCoordinator(GameCoordinator gameCoordinator)
