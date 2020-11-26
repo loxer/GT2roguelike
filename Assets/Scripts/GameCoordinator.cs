@@ -8,52 +8,60 @@ public class GameCoordinator : MonoBehaviour
     private GameObject player;
     private GameObject[] dungeonRooms;
     private GameObject currentRoom;
+    private GameObject dungeonGenerator;
     
     private bool gameStatusChange = false;
-    private bool gameRunning = false;
-    
 
     void Start()
     {
         cam = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
         player = GameObject.FindWithTag("Player");
+        player.GetComponent<DisCharge>().SetGameCoordinator(this);
     }
 
     void Update()
     {
         if(gameStatusChange)
         {
-            if(gameRunning)
+            if(Game.isRunning)
             {
                 DisablePlayer();
-                gameRunning = false;
+                Game.isRunning = false;
             }
             else
             {
                 EnablePlayer();
-                gameRunning = true;
+                Game.isRunning = true;
             }
 
             gameStatusChange = false;
         }
 
-        if(gameRunning)
+        if(Game.isRunning)
         {
             CheckForRoomChange();
         }        
     }
+
+    private void GameStatusChange()
+    {
+        gameStatusChange = true;
+    }
     
     public void DungeonGenerationFinished(GameObject[] dungeonRooms, GameObject dungeonGenerator)
     {
-        dungeonGenerator.gameObject.SetActive(false);
+        this.dungeonGenerator = dungeonGenerator;
+        dungeonGenerator.SetActive(false);
+
         this.dungeonRooms = dungeonRooms;
-        currentRoom = dungeonRooms[0];
+        currentRoom = dungeonRooms[UnityEngine.Random.Range(0, dungeonRooms.Length)];
+
         StartCoroutine(PrepareCameraPosition());        
     }
 
     private IEnumerator PrepareCameraPosition()
     {
-        StartCoroutine(cam.StartingZoom(currentRoom.transform.position)); // Start room
+        cam.ZoomIn(currentRoom.transform.position); // Start room
 
         while(!cam.IsInPosition())                      // check regularly if the starting zoom has finished
         {
@@ -62,25 +70,61 @@ public class GameCoordinator : MonoBehaviour
         
         yield return new WaitForSeconds(1f);            // give the player a second before something new happens
         
-        for(int i = 1; i < dungeonRooms.Length; i++)
+        for(int i = 0; i < dungeonRooms.Length; i++)
         {
             dungeonRooms[i].SetActive(false);           // make all rooms disappear (except the first one)
+            dungeonRooms[i].transform.GetChild(0).GetComponent<Collider2D>().enabled = false;
         }
 
-        player.transform.position = currentRoom.transform.position;        
-        gameStatusChange = true;
+        currentRoom.SetActive(true);
+        player.transform.position = currentRoom.transform.position;
+        player.GetComponent<DisCharge>().GameStarted();
+        GameStatusChange();
     }
 
     private void EnablePlayer()
     {        
-        player.GetComponent<WalkingCycle>().enabled = true;
-        player.GetComponent<PlayerShoot>().enabled = true;        
+        player.GetComponent<rbmovement>().enabled = true;
+        player.GetComponent<DisCharge>().enabled = true;  
+        player.GetComponent<KeepCharacterOnScreen>().enabled = true;        
+
     }
 
     private void DisablePlayer()
     {        
-        player.GetComponent<WalkingCycle>().enabled = false;
-        player.GetComponent<PlayerShoot>().enabled = false;        
+        player.GetComponent<rbmovement>().enabled = false;
+        player.GetComponent<DisCharge>().enabled = false;  
+        player.GetComponent<KeepCharacterOnScreen>().enabled = false;       
+    }
+
+    public void PlayerDead()
+    {
+        GameStatusChange();        
+        StartCoroutine(PrepareRestart());        
+    }
+
+    private IEnumerator PrepareRestart()
+    {
+        DisablePlayer();
+        
+        yield return new WaitForSeconds(1f);            // give the player a second to realize what just happened
+
+        cam.ZoomOut();
+
+        while(!cam.IsInPosition())                      // check regularly if the starting zoom has finished
+        {
+            yield return new WaitForSeconds(0.05f);
+        }
+       
+        yield return new WaitForSeconds(1f);            // give the player a second before something new happens
+        
+        for(int i = 0; i < dungeonRooms.Length; i++)
+        {
+            Destroy(dungeonRooms[i]);
+        }
+
+        dungeonGenerator.SetActive(true);
+        dungeonGenerator.GetComponent<DungeonGenerator>().CreateNewOne();
     }
 
     private void CheckForRoomChange()
@@ -233,7 +277,7 @@ public class GameCoordinator : MonoBehaviour
 
         if(newRoom)
         {
-            gameStatusChange = true;
+            GameStatusChange();
             StartCoroutine(NewRoom());
         }
     }
@@ -255,6 +299,6 @@ public class GameCoordinator : MonoBehaviour
         currentRoom.SetActive(true);
 
         yield return new WaitForSeconds(1f);            // give the player a second before something new happens
-        gameStatusChange = true;
+        GameStatusChange();
     }
 }

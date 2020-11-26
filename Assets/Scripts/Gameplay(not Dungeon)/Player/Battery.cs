@@ -20,10 +20,14 @@ public class Battery : MonoBehaviour
     }
 
     private void DecreaseBattery(){
-        if(battery.value > 0) {
-            battery.value -= 1;
+        if(Game.isRunning)
+        {
+            if(battery.value > 0) 
+            {
+                battery.value -= 1;
+            }
+            fill.color =  gradient.Evaluate(battery.normalizedValue); //normalized Value returns a value between 0 and 1 
         }
-        fill.color =  gradient.Evaluate(battery.normalizedValue); //normalized Value returns a value between 0 and 1 
     }
 
     public float GetBattery()

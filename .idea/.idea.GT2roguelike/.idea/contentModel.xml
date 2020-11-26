@@ -9,6 +9,7 @@
         <e p="Scripts" t="Include">
           <e p="CameraControl.cs" t="Include" />
           <e p="dungeon" t="Include">
+            <e p="EnemySpawnPoint.cs" t="Include" />
             <e p="spawnPoint.cs" t="Include" />
           </e>
           <e p="Dungeon.cs" t="Include" />
