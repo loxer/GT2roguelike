@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameCoordinator : MonoBehaviour
 {
+    [SerializeField] private GameObject bossPrefab = default;
     private CameraControl cam;
     private GameObject player;
     private GameObject[] dungeonRooms;
@@ -54,8 +55,13 @@ public class GameCoordinator : MonoBehaviour
         dungeonGenerator.SetActive(false);
 
         this.dungeonRooms = dungeonRooms;
-        currentRoom = dungeonRooms[UnityEngine.Random.Range(0, dungeonRooms.Length)];
-
+        //spawn in first room of path
+        currentRoom = dungeonRooms[0];
+        Game.lastRoom = dungeonRooms[dungeonRooms.Length - 1];
+        Debug.Log(Game.lastRoom);
+        // boss spawns in last dungeon 
+        GameObject[] enemyArray = Game.lastRoom.AddComponent<EnemySpawnPoint>().enemy = new GameObject[1];
+        enemyArray[0] = bossPrefab;
         StartCoroutine(PrepareCameraPosition());        
     }
 
