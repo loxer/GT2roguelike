@@ -5,4 +5,5 @@ using UnityEngine;
 public class Game
 {    
     public static bool isRunning = false;
+    public static GameObject lastRoom;
 }
