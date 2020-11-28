@@ -12,10 +12,6 @@ more information and documentation of the development process can be found in ou
 
 * Game Idea: https://github.com/daaning/GT2roguelike/wiki/Spielidee:-Electro-Dungeon
 
-## Projects
-
-See what we are currently working on and will be added to the game soon
-
 
 ## Cool features 
 
@@ -28,3 +24,8 @@ To show off the dungeon we have just randomly generated for you we have build a 
 
 ### charge that phone!
 Juice that old battery back up and keep fighting those annoying pop ups and applications, defing death for just a bit longer :)
+
+
+## Projects
+
+See what we are currently working on and will be added to the game soon
