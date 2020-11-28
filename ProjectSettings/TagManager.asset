@@ -9,6 +9,7 @@ TagManager:
   - DungeonGenerator
   - PopUp
   - Boss
+  - BossBar
   layers:
   - Default
   - TransparentFX
