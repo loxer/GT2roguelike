@@ -145,7 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 200
   damage: 10
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 2616562505289475162, guid: a37327a21452d914f9df5114b6e01dbf,
+    type: 3}
   isDead: 0
 --- !u!114 &554114953
 MonoBehaviour:
@@ -159,4 +160,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486c70fb58fbea24d83e4ac596946026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 0}
