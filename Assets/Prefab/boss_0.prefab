@@ -145,9 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad9a30a67e5fb340b15ce45716c8b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
+  health: 1000
   damage: 10
-  healthBar: {fileID: 0}
   isDead: 0
 --- !u!114 &554114953
 MonoBehaviour:
