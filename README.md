@@ -1,7 +1,6 @@
-# GT2roguelike
+# Electrodungeon - GT2 ROGUELIKE
 
 
-Game built for Game Engines Course @ HTW Berlin 
 
 
 
@@ -27,4 +26,8 @@ Next to our "regular" enemies we have an gruesome boss battle against the great 
 
 ## Projects
 
-See what we are currently working on and will be added to the game soon
+See what we are currently developing and will be added to the game soon
+
+
+
+Game built for Game Engines Course @ HTW Berlin 
