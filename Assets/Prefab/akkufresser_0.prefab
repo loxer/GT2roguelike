@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 8821757165359741884}
   - component: {fileID: 8821757165359741885}
   - component: {fileID: 814177154}
+  - component: {fileID: 587976576}
+  - component: {fileID: 587976577}
   m_Layer: 0
   m_Name: akkufresser_0
   m_TagString: Akkufresser
@@ -120,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 2
   howClose: 0.5
+  rb: {fileID: 587976576}
 --- !u!61 &8821757165359741884
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,4 +174,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486c70fb58fbea24d83e4ac596946026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 0}
+--- !u!50 &587976576
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8821757165359741879}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &587976577
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8821757165359741879}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.22, y: 0.19}
+    newSize: {x: 0.22, y: 0.19}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.22, y: 0.19}
+  m_EdgeRadius: 0
