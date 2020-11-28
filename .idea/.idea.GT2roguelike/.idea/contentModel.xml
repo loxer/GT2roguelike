@@ -41,34 +41,41 @@
               <e p="rbmovement.cs" t="Include" />
             </e>
           </e>
-          <e p="Gameplay(not Dungeon) 1" t="Include">
-            <e p="BossBattle" t="Include">
-              <e p="BossScript.cs" t="Include" />
-              <e p="DeathBehaviour.cs" t="Include" />
-              <e p="IdleBehaviour.cs" t="Include" />
-              <e p="IntroBehaviour.cs" t="Include" />
-              <e p="JumpBehaviour.cs" t="Include" />
-            </e>
-            <e p="Enemy" t="Include">
-              <e p="EnemyDamage.cs" t="Include" />
-              <e p="EnemyFollow.cs" t="Include" />
-            </e>
-            <e p="KeepCharacterOnScreen.cs" t="Include" />
-            <e p="Player" t="Include">
-              <e p="Battery.cs" t="Include" />
-              <e p="BulletScript.cs" t="Include" />
-              <e p="DisCharge.cs" t="Include" />
-              <e p="old_scripts" t="Include">
-                <e p="PlayerShoot.cs" t="Include" />
-                <e p="WalkingCycle.cs" t="Include" />
-              </e>
-              <e p="PointAndShoot.cs" t="Include" />
-              <e p="rbmovement.cs" t="Include" />
-            </e>
-          </e>
           <e p="MapValues.cs" t="Include" />
           <e p="noiseGenerator.cs" t="Include" />
           <e p="nonPathDungeon.cs" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Glyph Report.txt" t="Include" />
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
         </e>
       </e>
       <e p="GT2roguelike.sln" t="IncludeFlat" />
