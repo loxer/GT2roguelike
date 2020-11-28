@@ -19,7 +19,7 @@ more information and documentation of the development process can be found in ou
 Next to our "regular" enemies we have an gruesome boss battle against the great iphonius maximus who is your replacement and you should at the very least break his screen or something.
 
 
-### dugeon Outlook:
+### dugeon outlook:
 To show off the dungeon we have just randomly generated for you we have build a camera module that's shows the generatation of the path towards the end and the rest of the dungeon. Hope you can figure out where to charge and how to conserve energie before it's too late
 
 ### charge that phone!
