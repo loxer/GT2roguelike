@@ -6,13 +6,17 @@ using UnityEngine;
 //https://pressstart.vip/tutorials/2018/06/28/41/keep-object-in-bounds.html
 public class KeepCharacterOnScreen : MonoBehaviour
 {
-    public Camera MainCamera;
+    //public Camera MainCamera;
     private Vector2 screenBounds;
     private float objectWidth;
     private float objectHeight;
 
     void Start () {
-        screenBounds = MainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, MainCamera.transform.position.z));
+        if (Camera.main != null)
+        {
+            screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,
+                    Camera.main.transform.position.z));
+        }
         objectWidth = transform.GetComponent<SpriteRenderer>().bounds.extents.x; //extents = size of width / 2
         objectHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y; //extents = size of height / 2
     }

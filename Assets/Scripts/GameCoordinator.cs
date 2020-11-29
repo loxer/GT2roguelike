@@ -90,7 +90,7 @@ public class GameCoordinator : MonoBehaviour
 
     private void EnablePlayer()
     {        
-        player.GetComponent<rbmovement>().enabled = true;
+        player.GetComponent<RbMovement>().enabled = true;
         player.GetComponent<DisCharge>().enabled = true;  
         player.GetComponent<KeepCharacterOnScreen>().enabled = true;        
 
@@ -98,7 +98,7 @@ public class GameCoordinator : MonoBehaviour
 
     private void DisablePlayer()
     {        
-        player.GetComponent<rbmovement>().enabled = false;
+        player.GetComponent<RbMovement>().enabled = false;
         player.GetComponent<DisCharge>().enabled = false;  
         player.GetComponent<KeepCharacterOnScreen>().enabled = false;       
     }

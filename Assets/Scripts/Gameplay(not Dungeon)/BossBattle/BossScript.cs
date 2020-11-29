@@ -11,12 +11,13 @@ public class BossScript : MonoBehaviour
 
 
     //public Animator camAnim;
-    public Slider healthBar;
+    private Slider healthBar;
     private Animator anim;
     public bool isDead;
 
     private void Start()
     {
+        healthBar = GameObject.FindGameObjectWithTag("BossBar").GetComponent<Slider>();
         anim = GetComponent<Animator>();
     }
 
