@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BossScript : MonoBehaviour
 {
@@ -23,18 +24,27 @@ public class BossScript : MonoBehaviour
 
     private void Update()
     {
-        if (health <= 50) {
+        if(!Game.won)
+        {
+            if (health <= 50) {
             anim.SetTrigger("stageTwo");
-        }
+            }
 
-        if (health <= 0) {
-            anim.SetTrigger("death");
-        }
+            if (health <= 0) {
+                anim.SetTrigger("death");
+                
+                StartCoroutine(GameWon());
+                Game.won = true;      
+                
+            }
 
-        // give the player some time to recover before taking more damage !
-        if (timeBtwDamage > 0) {
-            timeBtwDamage -= Time.deltaTime;
+            // give the player some time to recover before taking more damage !
+            if (timeBtwDamage > 0) {
+                timeBtwDamage -= Time.deltaTime;
+                
+            }
         }
+        
 
         healthBar.value = health;
     }
@@ -48,5 +58,11 @@ public class BossScript : MonoBehaviour
                 other.GetComponent<DisCharge>().battery.value -= damage;
             }
         } 
+    }
+
+    private IEnumerator GameWon()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Win");
     }
 }

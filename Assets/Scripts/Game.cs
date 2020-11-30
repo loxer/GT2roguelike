@@ -5,5 +5,6 @@ using UnityEngine;
 public class Game
 {    
     public static bool isRunning = false;
-    public static GameObject lastRoom;
+    public static bool won = false;
+    public static GameObject lastRoom;    
 }
