@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameCoordinator : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class GameCoordinator : MonoBehaviour
 
     void Update()
     {
+        if(Game.won)
+        {
+            GameStatusChange();
+        }
+
         if(gameStatusChange)
         {
             if(Game.isRunning)
@@ -55,10 +61,11 @@ public class GameCoordinator : MonoBehaviour
         dungeonGenerator.SetActive(false);
 
         this.dungeonRooms = dungeonRooms;
+
         //spawn in first room of path
         currentRoom = dungeonRooms[0];
         Game.lastRoom = dungeonRooms[dungeonRooms.Length - 1];
-        Debug.Log(Game.lastRoom);
+
         // boss spawns in last dungeon 
         GameObject[] enemyArray = Game.lastRoom.AddComponent<EnemySpawnPoint>().enemy = new GameObject[1];
         enemyArray[0] = bossPrefab;

@@ -22,7 +22,7 @@ public class EnemyFollow : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (target != null)
+        if (target != null && Game.isRunning)
         {
             if (Vector2.Distance(transform.position, target.position) > howClose)
             {
