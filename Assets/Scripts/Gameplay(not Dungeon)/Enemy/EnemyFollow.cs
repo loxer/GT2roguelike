@@ -9,12 +9,14 @@ public class EnemyFollow : MonoBehaviour
 
     [SerializeField] private float enemySpeed = 3f;
     [SerializeField] private float howClose = 3f;
+    [SerializeField] private  Rigidbody2D rb;
 
     private Transform target; // the Object the Enemy is chasing after
     
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -24,8 +26,7 @@ public class EnemyFollow : MonoBehaviour
         {
             if (Vector2.Distance(transform.position, target.position) > howClose)
             {
-                transform.position =
-                    Vector2.MoveTowards(transform.position, target.position, enemySpeed * Time.fixedDeltaTime);
+                rb.MovePosition(Vector2.MoveTowards(transform.position, target.position, enemySpeed * Time.fixedDeltaTime));
             }
         }
     }
