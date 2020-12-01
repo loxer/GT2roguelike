@@ -131,13 +131,16 @@ public class GameCoordinator : MonoBehaviour
        
         yield return new WaitForSeconds(1f);            // give the player a second before something new happens
         
-        for(int i = 0; i < dungeonRooms.Length; i++)
+        SceneManager.LoadScene("Lose");
+
+        // probably not neccessary anymore, since we switch to the loosing screen before the next dungeon gets generated
+        /* for(int i = 0; i < dungeonRooms.Length; i++)
         {
             Destroy(dungeonRooms[i]);
         }
 
         dungeonGenerator.SetActive(true);
-        dungeonGenerator.GetComponent<DungeonGenerator>().CreateNewOne();
+        dungeonGenerator.GetComponent<DungeonGenerator>().CreateNewOne(); */
     }
 
     private void CheckForRoomChange()
