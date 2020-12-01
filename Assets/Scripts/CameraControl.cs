@@ -83,7 +83,6 @@ public class CameraControl : MonoBehaviour
                 if(transform.position == position && Camera.main.orthographicSize == zoomOutOrthographicSize)
                 {
                     cameraInPosition = true;
-                    print("Camera in Position");
                 }
             }
         }

@@ -21,13 +21,16 @@ public class JumpBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (timer < 0)
+        if(Game.isRunning)
         {
-            animator.SetTrigger("idle");
-        }
-        else
-        {
-            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                animator.SetTrigger("idle");
+            }
+            else
+            {
+                timer -= Time.deltaTime;
+            }
         }
         
         Vector2 target = new Vector2(playerPos.position.x, animator.transform.position.y);

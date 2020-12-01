@@ -6,6 +6,12 @@ public class DisCharge : MonoBehaviour
 {
     public Slider battery = default;
     private GameCoordinator gameCoordinator;
+    private Vector3 playerStartingPosition;
+
+    void Start()
+    {
+        playerStartingPosition = transform.position;
+    }
 
     void Update()
     {
@@ -40,13 +46,12 @@ public class DisCharge : MonoBehaviour
 
         yield return new WaitForSeconds(2f);            // give the player a moment to realize what just happened
         
-        this.gameObject.SetActive(false);
+        transform.position = playerStartingPosition;
         battery.gameObject.SetActive(false);
     }
 
     public void GameStarted()
     {
-        this.gameObject.SetActive(true);
         battery.gameObject.SetActive(true);
         battery.value = 100;
     }

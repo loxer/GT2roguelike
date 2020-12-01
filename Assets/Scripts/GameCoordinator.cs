@@ -10,7 +10,7 @@ public class GameCoordinator : MonoBehaviour
     private GameObject player;
     private GameObject[] dungeonRooms;
     private GameObject currentRoom;
-    private GameObject dungeonGenerator;
+    private GameObject dungeonGenerator;    
     
     private bool gameStatusChange = false;
 
