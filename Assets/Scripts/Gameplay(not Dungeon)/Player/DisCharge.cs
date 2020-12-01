@@ -25,17 +25,17 @@ public class DisCharge : MonoBehaviour
     {
         if (other.CompareTag("Akkufresser") || other.CompareTag("PopUp"))
         {
-            Debug.Log("-5");
+            // Debug.Log("-5");
             battery.value -= 5f;
         }
         if (other.CompareTag("Boss"))
         {
-            Debug.Log("-10");
+            // Debug.Log("-10");
             battery.value -= 10f;
         }
         if (other.CompareTag("Steckdose"))
         {
-            Debug.Log("+5");
+            // Debug.Log("+5");
             battery.value += 5f;
         }       
     }
