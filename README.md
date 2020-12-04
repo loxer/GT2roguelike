@@ -1,8 +1,8 @@
-# Electrodungeon - roguelike dungeon crawler
 
 <img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/electrodugeons.jpg" width="60%" position="center" />
 
 ## WIKI
+
 
 more information and documentation of the development process can be found in our github WIKI !
 
