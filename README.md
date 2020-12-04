@@ -42,11 +42,11 @@ Next to our "regular" enemies we have an gruesome boss battle against the great 
 ## About Us
 
 Game built for Game Engines Course @ HTW Berlin by
-* Daphna Beljavskij 
-* Daan Lockhorst
-* Florian Murzov-Pirkl
+* [Daphna Beljavskij](https://github.com/DaphiFluffi)
+* [Daan Lockhorst](https://github.com/daaning)
+* [Florian Murzov-Pirkl](https://github.com/loxer)
 
 
-We hope you have fun playing we sure did building :)
+We hope you have as much fun playing as we did building :)
 
 
