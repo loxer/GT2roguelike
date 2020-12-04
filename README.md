@@ -38,8 +38,8 @@ Next to our "regular" enemies we have an gruesome boss battle against the great 
 ## Projects
 See what we are currently developing and will be added to the game soon
 
+## about us
 
-
-Game built for Game Engines Course @ HTW Berlin 
+Game built for Game Engines Course @ HTW Berlin
 
 We hope you have fun playing we sure did building :)
