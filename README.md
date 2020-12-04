@@ -25,6 +25,8 @@ Juice that old battery back up and keep fighting those annoying pop ups and appl
 ### dugeon generator:
 To show off the dungeon the creator has just randomly generated for you we have build a camera module that's shows the generatation of the path towards the end and the rest of the dungeon. Hope you can figure out where to charge and how to conserve energy before it's too late and the pop ups win again.
 
+<img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/startbildschrim.gif" width="350" />
+
 ![](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/startbildschrim.gif | width=350)
 
 
