@@ -31,7 +31,7 @@ To show off the dungeon the creator has just randomly generated for you we have 
 ### Appalicious NomNomNOm
 These apps are getting hungerier by the day, run fast before appalicious installs some updates and absolutely destroy your battery
 
-![alt text](Assets/GIFs/akkufresser.gif "accufresser" =350x250)
+![](Assets/GIFs/akkufresser.gif =350x250)
 
 ### iphonius maximus:
 Next to our "regular" enemies we have an gruesome boss battle against the great iphonius maximus who is your replacement and you should at the very least break it's screen or empty it's battery before yours runs out.
