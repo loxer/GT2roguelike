@@ -35,7 +35,7 @@ These apps are getting hungerier by the day, run fast before applicalicious inst
 <img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/akkufresser.gif" width="390" />
 
 ### iPhonius Maximus:
-Next to our "regular" enemies we have an gruesome boss battle against the great iPhonius Maximus who is your replacement. Aggrivated as you are, you should at the very least break its screen or empty its battery before yours runs out.
+Next to our "regular" enemies we have an gruesome boss battle against the great iPhonius Maximus who is your replacement. Aggravated as you are, you should at the very least break its screen or empty its battery before yours runs out.
 
 ![alt text](Assets/GIFs/bossbattle.gif)
 
