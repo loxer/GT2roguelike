@@ -6,9 +6,7 @@
 
 more information and documentation of the development process can be found in our github WIKI !
 
-* Game Idea: https://github.com/daaning/GT2roguelike/wiki/Spielidee:-Electro-Dungeon
-
-![](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/plays.jpg "electro dungeon")
+* Game Idea and docs: [WIKI]: https://github.com/daaning/GT2roguelike/wiki/Spielidee:-Electro-Dungeon
 
 
 ## Play 
