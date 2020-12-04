@@ -11,6 +11,7 @@ public class JumpBehaviour : StateMachineBehaviour
     public float maxTime;
     public float speed; 
     private Transform playerPos;
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -33,7 +34,8 @@ public class JumpBehaviour : StateMachineBehaviour
             }
         }
         
-        Vector2 target = new Vector2(playerPos.position.x, animator.transform.position.y);
+       // Vector2 target = new Vector2(playerPos.position.x, animator.transform.position.y);
+        Vector2 target = new Vector2(playerPos.position.x, playerPos.position.y);
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
     }
 
