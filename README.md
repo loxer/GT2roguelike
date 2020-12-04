@@ -9,7 +9,7 @@
 
 ## Story
 
-You play as a old phone who has just been trown out for a brand new jphone who is way better looking, smarter and hasn't had it's battery programmed to die for no reason. So what do you do just turn to dust or play electro dungeon and break that jphones into a million pieces. 
+You play as an old phone that has just been trown out for a brand new jPhone which is way better looking, smarter and hasn't had it's battery programmed to die for no reason. So rather than turning to dust you enter the Electro Dungeon to break that jPhone into a Million pieces. 
 
 ## Play 
 - to play Electro Dungeon on Windows, get it from our [releases page](https://github.com/daaning/GT2roguelike/releases)
@@ -34,8 +34,8 @@ These apps are getting hungerier by the day, run fast before applicalicious inst
 
 <img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/akkufresser.gif" width="390" />
 
-### iPhonius Maximus:
-Next to our "regular" enemies we have an gruesome boss battle against the great iPhonius Maximus who is your replacement. Aggravated as you are, you should at the very least break its screen or empty its battery before yours runs out.
+### jPhonius Maximus:
+Next to our "regular" enemies we have an gruesome boss battle against the great jPhonius Maximus who is your replacement. Aggravated as you are, you set out to, at the very least, break its screen or empty its battery before yours runs out.
 
 ![alt text](Assets/GIFs/bossbattle.gif)
 
