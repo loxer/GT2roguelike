@@ -41,3 +41,5 @@ See what we are currently developing and will be added to the game soon
 
 
 Game built for Game Engines Course @ HTW Berlin 
+
+We hope you have fun playing we sure did building :)
