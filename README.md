@@ -7,6 +7,10 @@
 * Game Idea and docs: [WIKI](https://github.com/daaning/GT2roguelike/wiki/Spielidee:-Electro-Dungeon)
 * Gameplay videos: [WIKI](https://github.com/daaning/GT2roguelike/wiki/gameplay)
 
+## Story
+
+You play as a old phone who has just been trown out for a brand new jphone who is way better looking, smarter and hasn't had it's battery programmed to die for no reason. So what do you do just turn to dust or play electro dungeon and break that jphones into a million pieces. 
+
 ## Play 
 - to play Electro Dungeon on Windows, get it from our [releases page](https://github.com/daaning/GT2roguelike/releases)
 - use WSAD or arrow keys to walk around in the dungeon 
