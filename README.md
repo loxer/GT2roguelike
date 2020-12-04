@@ -5,7 +5,7 @@
 ## WIKI
 
 * Game Idea and docs: [WIKI](https://github.com/daaning/GT2roguelike/wiki/Spielidee:-Electro-Dungeon)
-* Gameplay videos: [WIKI](https://github.com/daaning/GT2roguelike/wiki/gameplay)
+* Gameplay videos: [WIKI Gameplay](https://github.com/daaning/GT2roguelike/wiki/gameplay)
 
 ## Story
 
@@ -48,5 +48,8 @@ Game built for Game Engines Course @ HTW Berlin by
 
 
 We hope you have as much fun playing as we did building :)
+
+### Ressources
+* [WIKI Sources](https://github.com/daaning/GT2roguelike/wiki/sources)
 
 
