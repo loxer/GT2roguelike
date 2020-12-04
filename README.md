@@ -7,6 +7,7 @@
 more information and documentation of the development process can be found in our github WIKI !
 
 * Game Idea and docs: [WIKI](https://github.com/daaning/GT2roguelike/wiki/Spielidee:-Electro-Dungeon)
+* Gameplay videos: [WIKI](https://github.com/daaning/GT2roguelike/wiki/gameplay)
 
 ## Play 
 
@@ -38,10 +39,6 @@ Next to our "regular" enemies we have an gruesome boss battle against the great 
 
 ## Projects
 See what we are currently developing and will be added to the game soon
-
-## GamePlay 
-
-See all the gameplay materials on our gameplay scection in our wiki
 
 
 ## about us
