@@ -1958,5 +1958,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Healthbar
       objectReference: {fileID: 0}
+    - target: {fileID: 2616562505289475162, guid: a37327a21452d914f9df5114b6e01dbf,
+        type: 3}
+      propertyPath: m_Value
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616562505289475162, guid: a37327a21452d914f9df5114b6e01dbf,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a37327a21452d914f9df5114b6e01dbf, type: 3}
