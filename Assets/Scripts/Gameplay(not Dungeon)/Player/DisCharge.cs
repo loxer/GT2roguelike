@@ -14,7 +14,7 @@ public class DisCharge : MonoBehaviour
 
     void Update()
     {
-        if (battery.value <= 0)
+        if (battery.value <= 0 || Game.won)
         {
             StartCoroutine(GameOver());
         }
@@ -33,14 +33,15 @@ public class DisCharge : MonoBehaviour
         if (other.CompareTag("Steckdose"))
         {
             battery.value += 5f;
-        }       
+        }
     }
     
     private IEnumerator GameOver()
     {
-        gameCoordinator.PlayerDead();
-        // give the player a moment to realize what just happened
-        yield return new WaitForSeconds(2f);            
+
+        gameCoordinator.GameEnded();
+
+        yield return new WaitForSeconds(2f);            // give the player a moment to realize what just happened
         
         transform.position = playerStartingPosition;
         battery.gameObject.SetActive(false);

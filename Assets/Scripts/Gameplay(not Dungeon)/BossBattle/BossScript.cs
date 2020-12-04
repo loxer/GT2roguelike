@@ -33,17 +33,14 @@ public class BossScript : MonoBehaviour
             if (health <= 0) {
                 anim.SetTrigger("death");
                 
-                StartCoroutine(GameWon());
-                Game.won = true;      
-                
+                Game.won = true;
             }
 
             // give the player some time to recover before taking more damage 
             if (timeBtwDamage > 0) {
-                timeBtwDamage -= Time.deltaTime;
+                timeBtwDamage -= Time.deltaTime;                
             }
-        }
-        
+        }        
 
         healthBar.value = health;
     }
@@ -56,11 +53,5 @@ public class BossScript : MonoBehaviour
                 other.GetComponent<DisCharge>().battery.value -= damage;
             }
         } 
-    }
-
-    private IEnumerator GameWon()
-    {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Win");
     }
 }

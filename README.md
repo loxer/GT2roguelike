@@ -1,49 +1,55 @@
-# Electrodungeon - roguelike dungeon crawler
+# Electro Dungeon - Roguelike Dungeon Crawler
 
-![alt text](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/electrodugeons.jpg "electro dungeon")
+![](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/electrodugeons.jpg )
 
 ## WIKI
 
-more information and documentation of the development process can be found in our github WIKI !
+* Game Idea and docs: [WIKI](https://github.com/daaning/GT2roguelike/wiki/Spielidee:-Electro-Dungeon)
+* Gameplay videos: [WIKI Gameplay](https://github.com/daaning/GT2roguelike/wiki/gameplay)
 
-* Game Idea: https://github.com/daaning/GT2roguelike/wiki/Spielidee:-Electro-Dungeon
+## Story
 
-![alt text](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/plays.jpg "electro dungeon")
-
+You play as an old phone that has just been trown out for a brand new jPhone which is way better looking, smarter and hasn't had it's battery programmed to die for no reason. So rather than turning to dust you enter the Electro Dungeon to break that jPhone into a Million pieces. 
 
 ## Play 
+- to play Electro Dungeon on Windows, get it from our [releases page](https://github.com/daaning/GT2roguelike/releases)
+- use WSAD or arrow keys to walk around in the dungeon 
+- point and shoot at enemies with your right mouse button
+- charge by going over outlets
+- Behold! You are losing battery every second!
 
-- Play electrodungeon for windows download from our releases page
-
-## Features
-
-### charge that phone!
+### Charge That Phone!
 Juice that old battery back up and keep fighting those annoying pop ups and applications, defying death for just a bit longer :)
 
-![alt text](Assets/GIFs/charge.gif "charge battery")
+![](Assets/GIFs/charge.gif )
 
-### dugeon generator:
-To show off the dungeon the creator has just randomly generated for you we have build a camera module that's shows the generatation of the path towards the end and the rest of the dungeon. Hope you can figure out where to charge and how to conserve energy before it's too late and the pop ups win again.
+### Dugeon Generator:
+To show off the random dungeon generation, the camera follows the generation of the path from start to finish. Hope you can figure out where to charge and how to conserve energy before it's too late and the enemies win again.
 
-![alt text](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/startbildschrim.gif "start menu" | width=350)
-
-
-### Appalicious NomNomNOm
-These apps are getting hungerier by the day, run fast before appalicious installs some updates and absolutely destroy your battery
-
-![](Assets/GIFs/akkufresser.gif =350x250)
-
-### iphonius maximus:
-Next to our "regular" enemies we have an gruesome boss battle against the great iphonius maximus who is your replacement and you should at the very least break it's screen or empty it's battery before yours runs out.
-
-![alt text](Assets/GIFs/bossbattle.gif "bossbattle gif" )
+<img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/startbildschrim.gif" width="390" />
 
 
-## Projects
-See what we are currently developing and will be added to the game soon
+### Applicalicious NomNomNom
+These apps are getting hungerier by the day, run fast before applicalicious installs some updates and absolutely destroys your battery.
 
-## about us
+<img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/akkufresser.gif" width="390" />
 
-Game built for Game Engines Course @ HTW Berlin
+### jPhonius Maximus:
+Next to our "regular" enemies we have an gruesome boss battle against the great jPhonius Maximus who is your replacement. Aggravated as you are, you set out to, at the very least, break its screen or empty its battery before yours runs out.
 
-We hope you have fun playing we sure did building :)
+![alt text](Assets/GIFs/bossbattle.gif)
+
+## About Us
+
+Game built for Game Engines Course @ HTW Berlin by
+* [Daphna Beljavskij](https://github.com/DaphiFluffi)
+* [Daan Lockhorst](https://github.com/daaning)
+* [Florian Murzov-Pirkl](https://github.com/loxer)
+
+
+We hope you have as much fun playing as we did building :)
+
+### Ressources
+* [WIKI Sources](https://github.com/daaning/GT2roguelike/wiki/sources)
+
+
