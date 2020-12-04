@@ -1,4 +1,4 @@
-# Electrodungeon - GT2 ROGUELIKE
+# Electrodungeon - roguelike dungeon crawler
 
 ![alt text](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/startbildschrim.gif "start menu")
 
