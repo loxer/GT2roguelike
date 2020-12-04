@@ -1,6 +1,6 @@
 # Electrodungeon - roguelike dungeon crawler
 
-![alt text](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/electroDungeon.jpg "electro dungeon")
+![alt text](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/electrodungeons.jpg "electro dungeon")
 
 ## WIKI
 
@@ -8,7 +8,7 @@ more information and documentation of the development process can be found in ou
 
 * Game Idea: https://github.com/daaning/GT2roguelike/wiki/Spielidee:-Electro-Dungeon
 
-![alt text](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/play.jpg "electro dungeon")
+![alt text](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/plays.jpg "electro dungeon")
 
 
 ## Play 
