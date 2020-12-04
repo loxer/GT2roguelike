@@ -35,9 +35,9 @@ Next to our "regular" enemies we have an gruesome boss battle against the great 
 
 ![alt text](Assets/GIFs/bossbattle.gif)
 
-## about us
+## About Us
 
-Game built for Game Engines Course @ HTW Berlin
+Game built for Game Engines Course @ HTW Berlin by
 * Daphna Beljavskij 
 * Daan Lockhorst
 * Florian Murzov-Pirkl
