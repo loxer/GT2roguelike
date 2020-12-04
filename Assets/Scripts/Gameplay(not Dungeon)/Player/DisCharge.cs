@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class DisCharge : MonoBehaviour
@@ -25,17 +24,14 @@ public class DisCharge : MonoBehaviour
     {
         if (other.CompareTag("Akkufresser") || other.CompareTag("PopUp"))
         {
-            // Debug.Log("-5");
             battery.value -= 5f;
         }
         if (other.CompareTag("Boss"))
         {
-            // Debug.Log("-10");
             battery.value -= 10f;
         }
         if (other.CompareTag("Steckdose"))
         {
-            // Debug.Log("+5");
             battery.value += 5f;
         }       
     }
@@ -43,8 +39,8 @@ public class DisCharge : MonoBehaviour
     private IEnumerator GameOver()
     {
         gameCoordinator.PlayerDead();
-
-        yield return new WaitForSeconds(2f);            // give the player a moment to realize what just happened
+        // give the player a moment to realize what just happened
+        yield return new WaitForSeconds(2f);            
         
         transform.position = playerStartingPosition;
         battery.gameObject.SetActive(false);

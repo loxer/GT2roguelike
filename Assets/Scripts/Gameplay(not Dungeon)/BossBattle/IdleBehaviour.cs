@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class IdleBehaviour : StateMachineBehaviour
 {
+    //https://www.youtube.com/watch?v=cXefXSD2SM0
     public float timer;
 
     public float minTime;
