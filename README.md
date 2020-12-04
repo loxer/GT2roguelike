@@ -1,6 +1,6 @@
 # Electrodungeon - roguelike dungeon crawler
 
-<img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/electrodugeons.jpg" width="90%" position="center" />
+<img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/electrodugeons.jpg" width="60%" position="center" />
 
 ## WIKI
 
