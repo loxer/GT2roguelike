@@ -1,9 +1,6 @@
 # Electrodungeon - GT2 ROGUELIKE
 
-
-
-
-
+![](GT2roguelike/Assets/GIFs/startbildschrim.gif)
 
 ## WIKI
 
