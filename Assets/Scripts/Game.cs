@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Game
 {    
-    public static bool isRunning = false;
-    public static bool won = false;
+    public static bool isRunning;
+    public static bool won;
     public static GameObject lastRoom;    
 }

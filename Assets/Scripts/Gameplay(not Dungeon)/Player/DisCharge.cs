@@ -15,7 +15,7 @@ public class DisCharge : MonoBehaviour
 
     void Update()
     {
-        if (battery.value <= 0)
+        if (battery.value <= 0 || Game.won)
         {
             StartCoroutine(GameOver());
         }
@@ -37,12 +37,12 @@ public class DisCharge : MonoBehaviour
         {
             // Debug.Log("+5");
             battery.value += 5f;
-        }       
+        }
     }
     
     private IEnumerator GameOver()
     {
-        gameCoordinator.PlayerDead();
+        gameCoordinator.GameEnded();
 
         yield return new WaitForSeconds(2f);            // give the player a moment to realize what just happened
         
