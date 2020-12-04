@@ -19,7 +19,7 @@ You play as an old phone that has just been trown out for a brand new jPhone whi
 - Behold! You are losing battery every second!
 
 ### Charge That Phone!
-Juice that old battery back up and keep fighting those annoying pop ups and applications, defying death for just a bit longer :)
+Juice that old battery back up and keep fighting those annoying pop ups and applications, defying death for just a little bit longer.
 
 ![](Assets/GIFs/charge.gif )
 
@@ -35,7 +35,7 @@ These apps are getting hungerier by the day, run fast before applicalicious inst
 <img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/akkufresser.gif" width="390" />
 
 ### jPhonius Maximus:
-Next to our "regular" enemies we have an gruesome boss battle against the great jPhonius Maximus who is your replacement. Aggravated as you are, you set out to, at the very least, break its screen or empty its battery before yours runs out.
+Next to our "regular" enemies we have a gruesome boss battle against the great jPhonius Maximus who is your replacement. Aggravated as you are, you set out to, at the very least, break its screen or empty its battery before yours runs out.
 
 ![alt text](Assets/GIFs/bossbattle.gif)
 
@@ -47,7 +47,7 @@ Game built for Game Engines Course @ HTW Berlin by
 * [Florian Murzov-Pirkl](https://github.com/loxer)
 
 
-We hope you have as much fun playing as we did building :)
+We hope you have as much fun playing Electro Dungeon as we had building it :)
 
 ### Ressources
 * [WIKI Sources](https://github.com/daaning/GT2roguelike/wiki/sources)
