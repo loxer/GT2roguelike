@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Battery : MonoBehaviour
@@ -33,12 +31,5 @@ public class Battery : MonoBehaviour
     public float GetBattery()
     {
         return battery.value;
-    }
-    void Update()
-    {
-        // for testing purposes
-    /*    battery.value -= 1; 
-        fill.color =  gradient.Evaluate(battery.normalizedValue);*/
-
     }
 }

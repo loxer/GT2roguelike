@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RbMovement : MonoBehaviour
 {
@@ -22,12 +20,6 @@ public class RbMovement : MonoBehaviour
         //Input
         movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         
-        // remove diagonal movement 
-        if (movement.x != 0)
-        {
-            movement.y = 0;
-        }
-        
         //Animation
         animator.SetFloat("Horizontal", movement.x); //set Horizontal Parameter equal to the actual movement 
         animator.SetFloat("Vertical", movement.y); //set Vertical Parameter equal to the actual movement 
@@ -43,6 +35,4 @@ public class RbMovement : MonoBehaviour
     {
         rb.MovePosition((Vector2) transform.position + (direction * speed * Time.fixedDeltaTime ));
     }
-    
-   
 }

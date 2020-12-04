@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//https://www.youtube.com/watch?v=cXefXSD2SM0
 public class IntroBehaviour : StateMachineBehaviour
 {
+    //https://www.youtube.com/watch?v=cXefXSD2SM0
     private int rand;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

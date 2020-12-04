@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 //https://pressstart.vip/tutorials/2018/06/28/41/keep-object-in-bounds.html
 public class KeepCharacterOnScreen : MonoBehaviour
 {
-    //public Camera MainCamera;
     private Vector2 screenBounds;
     private float objectWidth;
     private float objectHeight;
