@@ -41,7 +41,8 @@ Game built for Game Engines Course @ HTW Berlin
 * Daphna Beljavskij 
 * Daan Lockhorst
 * Florian Murzov-Pirkl
-We hope you have fun playing we sure did building :)
 
 
 We hope you have fun playing we sure did building :)
+
+
