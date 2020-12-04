@@ -8,7 +8,7 @@
 * Gameplay videos: [WIKI](https://github.com/daaning/GT2roguelike/wiki/gameplay)
 
 ## Play 
-- to play Electro Dungeon on Windows, use the download on our releases page
+- to play Electro Dungeon on Windows, get it from our [releases page]https://github.com/daaning/GT2roguelike/releases)
 - use WSAD or arrow keys to walk around in the dungeon 
 - point and shoot at enemies with your right mouse button
 - charge by going over outlets
