@@ -39,6 +39,11 @@ Next to our "regular" enemies we have an gruesome boss battle against the great 
 ## Projects
 See what we are currently developing and will be added to the game soon
 
+## GamePlay 
+
+See all the gameplay materials on our gameplay scection in our wiki
+
+
 ## about us
 
 Game built for Game Engines Course @ HTW Berlin
