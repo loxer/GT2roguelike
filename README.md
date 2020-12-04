@@ -16,6 +16,8 @@ more information and documentation of the development process can be found in ou
 
 - Play electrodungeon for windows download from our releases page
 
+## Features
+
 ### charge that phone!
 Juice that old battery back up and keep fighting those annoying pop ups and applications, defing death for just a bit longer :)
 
