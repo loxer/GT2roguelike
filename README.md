@@ -1,48 +1,47 @@
+# Electro Dungeon - Roguelike Dungeon Crawler
 
-<img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/electrodugeons.jpg" width="60%" position="center" />
+![](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/electrodugeons.jpg )
 
 ## WIKI
-
-
-more information and documentation of the development process can be found in our github WIKI !
 
 * Game Idea and docs: [WIKI](https://github.com/daaning/GT2roguelike/wiki/Spielidee:-Electro-Dungeon)
 * Gameplay videos: [WIKI](https://github.com/daaning/GT2roguelike/wiki/gameplay)
 
 ## Play 
+- to play Electro Dungeon on Windows, use the download on our releases page
+- use WSAD or arrow keys to walk around in the dungeon 
+- point and shoot at enemies with your right mouse button
+- charge by going over outlets
+- Behold! You are losing battery every second!
 
-- Play electrodungeon for windows download from our releases page
-
-## Features
-
-### charge that phone!
+### Charge That Phone!
 Juice that old battery back up and keep fighting those annoying pop ups and applications, defying death for just a bit longer :)
 
 ![](Assets/GIFs/charge.gif )
 
-### dugeon generator:
-To show off the dungeon the creator has just randomly generated for you we have build a camera module that's shows the generatation of the path towards the end and the rest of the dungeon. Hope you can figure out where to charge and how to conserve energy before it's too late and the pop ups win again.
+### Dugeon Generator:
+To show off the random dungeon generation, the camera follows the generation of the path from start to finish. Hope you can figure out where to charge and how to conserve energy before it's too late and the enemies win again.
 
 <img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/startbildschrim.gif" width="390" />
 
 
-### Appalicious NomNomNOm
-These apps are getting hungerier by the day, run fast before appalicious installs some updates and absolutely destroy your battery
+### Applicalicious NomNomNom
+These apps are getting hungerier by the day, run fast before applicalicious installs some updates and absolutely destroys your battery.
 
 <img src="https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/akkufresser.gif" width="390" />
 
-### iphonius maximus:
-Next to our "regular" enemies we have an gruesome boss battle against the great iphonius maximus who is your replacement and you should at the very least break it's screen or empty it's battery before yours runs out.
+### iPhonius Maximus:
+Next to our "regular" enemies we have an gruesome boss battle against the great iPhonius Maximus who is your replacement. Aggrivated as you are, you should at the very least break its screen or empty its battery before yours runs out.
 
 ![alt text](Assets/GIFs/bossbattle.gif)
-
-
-## Projects
-See what we are currently developing and will be added to the game soon
-
 
 ## about us
 
 Game built for Game Engines Course @ HTW Berlin
+* Daphna Beljavskij 
+* Daan Lockhorst
+* Florian Murzov-Pirkl
+We hope you have fun playing we sure did building :)
+
 
 We hope you have fun playing we sure did building :)
