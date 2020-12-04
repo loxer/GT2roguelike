@@ -26,8 +26,8 @@ public class BossScript : MonoBehaviour
     {
         if(!Game.won)
         {
-            if (health <= 50) {
-            anim.SetTrigger("stageTwo");
+            if (health <= 500) {
+                anim.SetTrigger("stageTwo");
             }
 
             if (health <= 0) {
