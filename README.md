@@ -1,6 +1,6 @@
 # Electrodungeon - GT2 ROGUELIKE
 
-![alt text](GT2roguelike/Assets/GIFs/startbildschrim.gif "start menu")
+![alt text](https://github.com/daaning/GT2roguelike/blob/main/Assets/GIFs/startbildschrim.gif "start menu")
 
 ## WIKI
 
