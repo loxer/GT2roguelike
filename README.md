@@ -16,7 +16,7 @@ more information and documentation of the development process can be found in ou
 ## Features
 
 ### charge that phone!
-Juice that old battery back up and keep fighting those annoying pop ups and applications, defing death for just a bit longer :)
+Juice that old battery back up and keep fighting those annoying pop ups and applications, defying death for just a bit longer :)
 
 ![alt text](Assets/GIFs/charge.gif "charge battery")
 
