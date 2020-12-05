@@ -8,6 +8,8 @@ using System.IO;
 using System.ComponentModel;
 using System;
 
+/* idea from spelunky and the youtube channels KidsCanCode, blackthornprod and Constructive Generation Methods forDungeon generation by Marco Niemann */
+
 public class DungeonGenerator : MonoBehaviour
 {
 
