@@ -33,11 +33,11 @@ public class JumpBehaviour : StateMachineBehaviour
             {
                 timer -= Time.deltaTime;
             }
+
+            // Vector2 target = new Vector2(playerPos.position.x, animator.transform.position.y);
+            Vector2 target = new Vector2(playerPos.position.x, playerPos.position.y);
+            animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
         }
-        
-       // Vector2 target = new Vector2(playerPos.position.x, animator.transform.position.y);
-        Vector2 target = new Vector2(playerPos.position.x, playerPos.position.y);
-        animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

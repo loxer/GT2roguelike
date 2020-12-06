@@ -6,5 +6,5 @@ public class Game
 {    
     public static bool isRunning;
     public static bool won;
-    public static GameObject lastRoom;    
+    public static GameObject lastRoom;
 }

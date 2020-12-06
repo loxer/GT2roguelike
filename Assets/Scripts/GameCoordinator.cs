@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,7 @@ public class GameCoordinator : MonoBehaviour
     private GameObject player;
     private GameObject[] dungeonRooms;
     private GameObject currentRoom;
-    private GameObject dungeonGenerator;
+    private GameObject dungeonGenerator;   
     
     private bool gameStatusChange = false;
 
@@ -18,7 +19,7 @@ public class GameCoordinator : MonoBehaviour
     {
         cam = GameObject.FindWithTag("MainCamera").GetComponent<CameraControl>();
         player = GameObject.FindWithTag("Player");
-        player.GetComponent<DisCharge>().SetGameCoordinator(this);
+        player.GetComponent<DisCharge>().SetGameCoordinator(this);        
 
         Game.isRunning = false;
         Game.won = false;
@@ -67,7 +68,7 @@ public class GameCoordinator : MonoBehaviour
         // boss spawns in last dungeon 
         GameObject[] enemyArray = Game.lastRoom.AddComponent<EnemySpawnPoint>().enemy = new GameObject[1];
         enemyArray[0] = bossPrefab;
-        enemyArray[0].SetActive(false);                 // boss should not be visible right from the beginning
+        enemyArray[0].SetActive(true);                 // boss is now visible right from the beginning
         
 
         StartCoroutine(PrepareCameraPosition());
@@ -310,12 +311,13 @@ public class GameCoordinator : MonoBehaviour
             GameStatusChange();
             StartCoroutine(NewRoom());
 
+            // This if-statement can be used for activating the boss, once the player arrives in the last room
             if(currentRoom == Game.lastRoom)
             {                
-                for(int i = 0; i < currentRoom.transform.childCount; i++) 
-                {
-                    currentRoom.transform.GetChild(i).gameObject.SetActive(true);
-                }
+            //     for(int i = 0; i < currentRoom.transform.childCount; i++) 
+            //     {
+            //         currentRoom.transform.GetChild(i).gameObject.SetActive(true);
+            //     } 
             }
         }
     }
